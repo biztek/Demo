@@ -11,5 +11,6 @@
   button:focus{
 outline: none !important;
   }
-
- 
+  .mat-menu-panel {
+  background-color: #f0f0f0;
+  }
