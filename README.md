@@ -1,4 +1,4 @@
-# CnextUi
+# UI
 
 'npm install' Will Install all the required modules to run the project.
 
