@@ -1,0 +1,81 @@
+<div class="bg-light">
+    <a href="#" class="ml-2"><i class="fas fa-folder "></i></a>    
+    <a href="#"><i class="fas fa-folder-open "></i></a>   
+    <a href="#"><i class="fas fa-times text-danger "></i></a> 
+    <a href="#"><i class="fas fa-check text-danger "></i></a>  
+    <a href="#"><i class="fas fa-print  "></i></a> 
+    <a href="#"><i class="fas fa-columns  text-primary"></i></a>       
+    <a href="#"><i class="fas fa-print  "></i></a>       
+    <a href="#" class="mr-3"><i class="fas fa-quote-left  "></i></a>       
+    <a href="#"><i class="fas fa-graduation-cap  text-primary"></i></a>       
+    <a href="#"><i class="fas fa-question text-success "></i></a>       
+    <a href="#"><i class="fas fa-newspaper  "></i></a>       
+    <a href="#" class="mr-3"><i class="fas fa-file-alt  "></i></a>       
+    <a href="#"><i class="fas fa-envelope  "></i></a>       
+    <a href="#"><i class="fas fa-list  "></i></a>       
+    <a href="#" class="mr-3"><i class="fas fa-clipboard-list  "></i></a>       
+    <a href="#"><i class="fas fa-file-medical  "></i></a>       
+    <a href="#"><i class="fas fa-file-invoice  "></i></a>       
+    <a href="#" class="mr-3"><i class="fas fa-file-signature  "></i></a>       
+    <a href="#" class="mr-3"><i class="fas fa-search  "></i></a>       
+    <a href="#"><i class="fas fa-camera text-primary "></i></a>       
+    <a href="#"><i class="fas fa-file-archive  "></i></a>       
+    <a href="#" class="mr-3"><i class="fas fa-ambulance  "></i></a>       
+    <a href="#"><i class="fas fa-hand-paper  "></i></a>       
+    <a href="#"><i class="fas fa-book-reader  "></i></a>       
+    <a href="#"><i class="fab fa-readme  "></i></a>       
+    <a href="#"><i class="fas fa-archive text-success "></i></a>       
+    <a href="#"><i class="fas fa-window-restore  "></i></a>       
+    <a href="#"><i class="fas fa-copy text-primary"></i></a>       
+    <a href="#"><i class="fas fa-file  "></i></a>       
+</div>
+
+<div class="row m-0">
+  <div class="col-2 pt-2" style="overflow-y: scroll;height: 650px;">
+    <mat-tree [dataSource]="nestedDataSource" [treeControl]="nestedTreeControl" class="example-tree">
+      <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>
+        <li class="mat-tree-node">
+          <button mat-icon-button disabled></button>
+          {{node.filename}}
+          <!-- :  {{node.type}} -->
+        </li>
+      </mat-tree-node>
+
+      <mat-nested-tree-node *matTreeNodeDef="let node; when: hasNestedChild">
+        <li>
+          <div class="mat-tree-node">
+            <button mat-icon-button matTreeNodeToggle [attr.aria-label]="'toggle ' + node.filename">
+              <mat-icon class="mat-icon-rtl-mirror">
+                {{nestedTreeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+              </mat-icon>
+            </button>
+            {{node.filename}}
+          </div>
+          <ul [class.example-tree-invisible]="!nestedTreeControl.isExpanded(node)">
+            <ng-container matTreeNodeOutlet></ng-container>
+          </ul>
+        </li>
+      </mat-nested-tree-node>
+    </mat-tree>
+  </div>
+  <div class="col p-0" style="overflow-y: scroll;height: 650px;">
+    <ul class="nav nav-tabs pt-3 pl-0" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="abstract-tab" data-toggle="tab" href="#abstract" role="tab" aria-controls="abstract" aria-selected="true">Abstract</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="edit-tab" data-toggle="tab" href="#edit" role="tab" aria-controls="edit" aria-selected="false">Edit</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="editresolution-tab" data-toggle="tab" href="#editresolution" role="tab" aria-controls="editresolution" aria-selected="false">Editre Solution</a>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="abstract" role="tabpanel" aria-labelledby="abstract-tab">
+        <app-list-view></app-list-view>
+      </div>
+      <div class="tab-pane fade" id="edit" role="tabpanel" aria-labelledby="edit-tab"><app-list-view></app-list-view></div>
+      <div class="tab-pane fade" id="editresolution" role="tabpanel" aria-labelledby="editresolution-tab"><app-list-view></app-list-view></div>
+    </div>
+  </div>
+</div>
