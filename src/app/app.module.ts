@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule , routingComponents} from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -15,7 +15,12 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatTabsModule} from '@angular/material/tabs';
 import { ListViewComponent } from './view-case/list-view/list-view.component';
 import { WindowFrameComponent } from './window-frame/window-frame.component';
-
+import { FormsModule,ReactiveFormsModule }   from '@angular/forms';
+import { AgGridModule } from 'ag-grid-angular';
+import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+import {MatCardModule} from '@angular/material/card';
+import {MatSelectModule} from '@angular/material/select';
+import {MatTableModule} from '@angular/material/table';
 
 
 @NgModule({
@@ -24,9 +29,10 @@ import { WindowFrameComponent } from './window-frame/window-frame.component';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    ViewCaseComponent,
+    // ViewCaseComponent,
     ListViewComponent,
-    WindowFrameComponent
+    WindowFrameComponent,
+    routingComponents
   ],
   imports: [
     BrowserModule,
@@ -35,6 +41,16 @@ import { WindowFrameComponent } from './window-frame/window-frame.component';
     MatMenuModule,
     MatDividerModule,
     MatTreeModule,
+    MatIconModule,
+    MatTabsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    AgGridModule.withComponents([]),
+    MatButtonModule,
+    MatCheckboxModule,
+    MatCardModule,
+    MatSelectModule,
+    MatTableModule,
     MatIconModule,
     MatTabsModule
   ],

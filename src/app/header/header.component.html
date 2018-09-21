@@ -35,7 +35,7 @@
             <mat-menu #mcase="matMenu" overlapTrigger="false">
               <button mat-menu-item>New Case</button>
               <button mat-menu-item>Update Case</button>
-              <button mat-menu-item>View Case</button>
+              <button mat-menu-item [routerLink]="['/view-find']" routerLinkActive="router-link-active" >View Case</button>
               <button mat-menu-item>Print Case</button>
               <button mat-menu-item>Delete Case</button>
             </mat-menu>
