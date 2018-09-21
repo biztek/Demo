@@ -9,3 +9,7 @@
   .table-bordered{
     border: 3px solid #A0A0A0;
   }
+  .table thead th, td {
+    padding: 3px !important;
+    font-size: 14px;
+  }
