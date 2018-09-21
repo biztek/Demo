@@ -14,3 +14,8 @@ outline: none !important;
   .mat-menu-panel {
   background-color: #f0f0f0;
   }
+
+  .btn{
+    font-weight: 600 !important;
+    font-size: 14px;
+  }
