@@ -14,6 +14,7 @@ import {MatTreeModule} from '@angular/material/tree';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTabsModule} from '@angular/material/tabs';
 import { ListViewComponent } from './view-case/list-view/list-view.component';
+import { WindowFrameComponent } from './window-frame/window-frame.component';
 
 
 
@@ -24,7 +25,8 @@ import { ListViewComponent } from './view-case/list-view/list-view.component';
     HeaderComponent,
     FooterComponent,
     ViewCaseComponent,
-    ListViewComponent
+    ListViewComponent,
+    WindowFrameComponent
   ],
   imports: [
     BrowserModule,
