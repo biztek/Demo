@@ -8,11 +8,9 @@
 }
 
 .status {
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     width: 100%;
-    height: 30px;
-    /* line-height: 35px; */
     background-color: #cccccc;
     padding-top: 0px;
 }
