@@ -2,6 +2,9 @@
 ul{
   padding-inline-start: 20px;
 }
+.row{
+margin-top: -5px;
+}
 
 a, .nav-link{
   color: black;
@@ -64,9 +67,16 @@ a, .nav-link{
   }
   input{
     border: 1px solid black;
-  
   }
-  
+  .input-last-firt{
+    width:250px !important;height: 23px;
+  }
+  .input-common{
+    height: 23px;
+  }
+  .input-small{
+    width:10px !important;height: 23px;
+  }
   ul {
     list-style: none;
   }
@@ -76,6 +86,22 @@ a, .nav-link{
   .matselect{
     width:25px;
     height: 23px;
-    background-color: #f0f0f0
+    background-color: #f0f0f0;
+    margin-left: 10px;width:203px;
   }
-  
+  .div-display-table{
+    display: table-row;
+
+  }
+  .buttom-common{
+    background-color:#f0f0f0;
+    margin-left: 16px;
+  }
+  .input-small2{
+    width:10px !important;
+    height: 20px;
+    margin-left: 5px
+  }
+  .button-filtertab{
+    background-color:#f0f0f0;
+  }
