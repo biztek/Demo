@@ -100,8 +100,7 @@ rowData = [
   },
 
 ];
-public onRowClicked(e) {
-console.log('Hello',e);
+public onRowClicked() {
 this.router.navigate(['view-case']);
 }
   constructor(private router: Router) { }
