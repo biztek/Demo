@@ -5,11 +5,15 @@ import { Routes, RouterModule } from '@angular/router';
  
 import { ViewComponent } from './view/view.component';
 import { ViewCaseComponent } from './view-case/view-case.component';
+import { OpenDatabaseComponent } from './open-database/open-database.component';
+import { HomeComponent } from './home/home.component';
 
 // component url paths
 const routes: Routes = [
 {path: 'view-find',component: ViewComponent },
 {path: 'view-case',component: ViewCaseComponent },
+{path: 'open-database',component: OpenDatabaseComponent },
+{path: 'home',component: HomeComponent },
 ];
 
 @NgModule({
