@@ -9,8 +9,8 @@
   }
 
   button:focus, button:hover{
-outline: none !important;
-background-color: transparent !important;
+    outline: none !important;
+    background-color: lightblue !important;
   }
   .mat-menu-panel {
   background-color: #f0f0f0 !important;
@@ -19,7 +19,9 @@ background-color: transparent !important;
   .btn{
     font-weight: 500 !important;
     font-size: 13px;
-  }
+    line-height: 25px;
+    margin-top: 2px !important;
+}
   .mat-button{
     min-width: 0px;
     padding: 0px 10px;
