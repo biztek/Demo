@@ -31,8 +31,8 @@
 </div>
 
 <div class="row m-0">
-  <div class="col-2 pt-2" style="overflow-y: scroll;height: 90vh;">
-    <mat-tree [dataSource]="nestedDataSource" [treeControl]="nestedTreeControl" class="example-tree">
+  <div class="col-2 pt-2 px-0 pb-0" style="overflow-y: scroll;height: 90vh;">
+    <mat-tree [dataSource]="nestedDataSource" [treeControl]="nestedTreeControl" class="example-tree h-100">
       <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>
         <li class="mat-tree-node">
           <button mat-icon-button disabled></button>
@@ -58,7 +58,7 @@
       </mat-nested-tree-node>
     </mat-tree>
   </div>
-  <div class="col p-0" style="overflow-y: scroll;height: 90vh;">
+  <div class="col p-0" style="overflow-y: auto;height: 90vh;">
     <ul class="nav nav-tabs pt-3 pl-0" id="myTab" role="tablist">
       <li class="nav-item">
         <a class="nav-link active" id="abstract-tab" data-toggle="tab" href="#abstract" role="tab" aria-controls="abstract" aria-selected="true">Abstract</a>
@@ -74,8 +74,8 @@
       <div class="tab-pane fade show active" id="abstract" role="tabpanel" aria-labelledby="abstract-tab">
         <app-list-view></app-list-view>
       </div>
-      <div class="tab-pane fade" id="edit" role="tabpanel" aria-labelledby="edit-tab"><app-list-view></app-list-view></div>
-      <div class="tab-pane fade" id="editresolution" role="tabpanel" aria-labelledby="editresolution-tab"><app-list-view></app-list-view></div>
+      <div class="tab-pane fade" id="edit" role="tabpanel" aria-labelledby="edit-tab"><app-case-edit></app-case-edit></div>
+      <div class="tab-pane fade" id="editresolution" role="tabpanel" aria-labelledby="editresolution-tab"><app-case-editre-solution></app-case-editre-solution></div>
     </div>
   </div>
 </div>
