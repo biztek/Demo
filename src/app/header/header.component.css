@@ -8,14 +8,19 @@
       height: 38px;
   }
 
-  button:focus{
+  button:focus, button:hover{
 outline: none !important;
+background-color: transparent !important;
   }
   .mat-menu-panel {
-  background-color: #f0f0f0;
+  background-color: #f0f0f0 !important;
   }
 
   .btn{
-    font-weight: 600 !important;
+    font-weight: 500 !important;
     font-size: 13px;
+  }
+  .mat-button{
+    min-width: 0px;
+    padding: 0px 10px;
   }

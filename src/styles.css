@@ -4,7 +4,16 @@
 @import "~ag-grid-community/dist/styles/ag-theme-balham.css";
 
 html, body { height: 100%; }
-body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;background-color: #f0f0f0;}
 
+.no-hover-effect.mat-button.mat-primary .mat-button-focus-overlay,
+.no-hover-effect.mat-button.mat-accent .mat-button-focus-overlay,
+.no-hover-effect.mat-button.mat-warn .mat-button-focus-overlay
+{
+  background-color: transparent !important;
+}
 
-
+.mat-menu-panel {
+    background-color: #f0f0f0 !important;
+    margin-top: -5px;
+}
