@@ -23,6 +23,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
 import { CaseEditComponent } from './view-case/case-edit/case-edit.component';
 import { CaseEditreSolutionComponent } from './view-case/case-editre-solution/case-editre-solution.component';
+import { OpenDatabaseComponent } from './open-database/open-database.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { CaseEditreSolutionComponent } from './view-case/case-editre-solution/ca
     WindowFrameComponent,
     routingComponents,
     CaseEditComponent,
-    CaseEditreSolutionComponent
+    CaseEditreSolutionComponent,
+    OpenDatabaseComponent
   ],
   imports: [
     BrowserModule,
