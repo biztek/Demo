@@ -21,6 +21,8 @@ import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import {MatCardModule} from '@angular/material/card';
 import {MatSelectModule} from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
+import { CaseEditComponent } from './view-case/case-edit/case-edit.component';
+import { CaseEditreSolutionComponent } from './view-case/case-editre-solution/case-editre-solution.component';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import {MatTableModule} from '@angular/material/table';
     // ViewCaseComponent,
     ListViewComponent,
     WindowFrameComponent,
-    routingComponents
+    routingComponents,
+    CaseEditComponent,
+    CaseEditreSolutionComponent
   ],
   imports: [
     BrowserModule,
