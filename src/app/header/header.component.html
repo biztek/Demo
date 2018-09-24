@@ -20,8 +20,11 @@
           </mat-menu>
   
           <mat-menu #importm="matMenu" parentMenu="mfile">
-            <button mat-menu-item>Menue Sub 1</button>
-            <button mat-menu-item>Menue Sub 2</button>
+            <button mat-menu-item [routerLink]="['/import-cases']" routerLinkActive="router-link-active">Import Cases...</button>
+            <button mat-menu-item>Case Reply</button>
+            <button mat-menu-item>Shared Follow-Up...</button>
+            <button mat-menu-item>Reload</button>
+            <button mat-menu-item>FCDS</button>
           </mat-menu>
   
           <mat-menu #exportm="matMenu">
