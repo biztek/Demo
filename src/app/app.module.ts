@@ -26,6 +26,7 @@ import { CaseEditreSolutionComponent } from './view-case/case-editre-solution/ca
 import { OpenDatabaseComponent } from './open-database/open-database.component';
 import { ImportCasesComponent } from './import-cases/import-cases.component';
 import { TransmitCasesComponent } from './transmit-cases/transmit-cases.component';
+import { CasImportComponent } from './cas-import/cas-import.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { TransmitCasesComponent } from './transmit-cases/transmit-cases.componen
     CaseEditreSolutionComponent,
     OpenDatabaseComponent,
     ImportCasesComponent,
-    TransmitCasesComponent
+    TransmitCasesComponent,
+    CasImportComponent
   ],
   imports: [
     BrowserModule,
