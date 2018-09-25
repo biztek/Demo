@@ -54,7 +54,7 @@
           <button mat-button [matMenuTriggerFor]="mcasefinding" class="btn btn-link text-dark nounderline no-hover-effect" [disableRipple]="true" color="primary">Casefinding</button>
   
           <mat-menu #mcasefinding="matMenu" overlapTrigger="false" class="mat-elevation-z4">
-            <button mat-menu-item>Import</button>
+            <button mat-menu-item [routerLink]="['/cas-import']" routerLinkActive="router-link-active">Import</button>
             <mat-divider></mat-divider>
             <button mat-menu-item [matMenuTriggerFor]="reports">Reports</button>
             <button mat-menu-item [matMenuTriggerFor]="managefilters">Manage Filters</button>
