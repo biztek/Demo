@@ -25,6 +25,7 @@ import { CaseEditComponent } from './view-case/case-edit/case-edit.component';
 import { CaseEditreSolutionComponent } from './view-case/case-editre-solution/case-editre-solution.component';
 import { OpenDatabaseComponent } from './open-database/open-database.component';
 import { ImportCasesComponent } from './import-cases/import-cases.component';
+import { TransmitCasesComponent } from './transmit-cases/transmit-cases.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { ImportCasesComponent } from './import-cases/import-cases.component';
     CaseEditComponent,
     CaseEditreSolutionComponent,
     OpenDatabaseComponent,
-    ImportCasesComponent
+    ImportCasesComponent,
+    TransmitCasesComponent
   ],
   imports: [
     BrowserModule,
