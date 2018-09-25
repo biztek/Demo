@@ -28,8 +28,15 @@
           </mat-menu>
   
           <mat-menu #exportm="matMenu">
-            <button mat-menu-item>Menue Sub 1</button>
-            <button mat-menu-item>Menue Sub 2</button>
+            <button mat-menu-item [routerLink]="['transmit-cases']" routerLinkActive="router-link-active">Transmit Cases...</button>
+            <button mat-menu-item>Export Cases...</button>
+            <button mat-menu-item>Retransmit Cases...</button>
+            <button mat-menu-item>Call for Data</button>
+            <button mat-menu-item>RQRS</button>
+            <button mat-menu-item>Backup Most Recent...</button>
+            <button mat-menu-item>Upload Cases</button>
+            <button mat-menu-item>Unload</button>
+            <button mat-menu-item>Survivorship</button>
           </mat-menu>
         </li>
         <li class="nav-item">

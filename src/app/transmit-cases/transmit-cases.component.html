@@ -1,0 +1,152 @@
+<div class="container-fluid h-custom">
+  <div class="row h-custom justify-content-center align-items-center">
+    <div class="card">
+      <div class="row m-0 bg-white p-1">
+        <img src="/src/resources/logo.png" width="16px" height="16px">
+        <p class="mb-0 ml-2">Transmit Cases</p>
+        <button class="closebtn mr-3 mb-1" [routerLink]="['/home']" routerLinkActive="router-link-active">
+          <i class="fas fa-times text-secondary"></i></button>
+      </div>
+      <div class="row m-0 mt-3 mb-2">
+        <p class="mb-1 ml-19 w-auto">
+          Output Folder name:
+        </p>
+        <input type="file" class="form-control-file ml-2 lh bg-white" value="D:\CNExt\Facility\User\">
+      </div>
+      <div class="row m-0 mb-2">
+        <p class="mb-1 ml-5 w-auto">
+          Output filename:
+        </p>
+        <input type="text" class="form-control-file ml-2 w-auto" value="MAR268A">
+      </div>
+      <div class="row m-0 mb-2">
+        <p class="mb-1 ml-4 w-auto">
+          Output format name:
+        </p>
+        <select class="ml-2" disabled="disabled">
+          <option value="1">NAACCR 2016 Abstract/Rec Ver 16</option>
+        </select>
+      </div>
+      <div class="row m-0 mb-2">
+        <p class="mb-1  w-auto" style="margin-left: 6rem">
+          Facility:
+        </p>
+        <select class="ml-2 w-40">
+          <option value="1"><input type="checkbox" class="mr-1 ml-2 w-auto outline-0" checked="checked"> MARQUETTE</option>
+          <option value="1">BALDWIN</option>
+          <option value="1">MADISON</option>
+        </select>
+        <input type="checkbox" class="ml-3 mr-1 w-auto outline-0 text-muted" disabled="disabled">
+        <p class="mb-0 w-auto ml-0 text-muted">
+          All
+        </p>
+      </div>
+      <div class="row mx-0 mt-2 mb-0">
+        <p class="mb-0 w-auto" style="margin-left: 2rem!important;">
+          Write new case records?
+        </p>
+        <input type="checkbox" class="mr-1 ml-2 w-auto outline-0" checked="checked">
+        <p class="mb-0 w-auto" style="margin-left: 3.3rem!important;">
+          Print listing of cases transmitted?
+        </p>
+        <input type="checkbox" class="mr-1 ml-2 w-auto outline-0">
+      </div>
+      <div class="row mx-0 mt-2 mb-0">
+        <p class="mb-0 w-auto" style="margin-left: 1.6rem!important;">
+          Write correction records?
+        </p>
+        <input type="checkbox" class="mr-1 ml-2 w-auto outline-0" checked="checked">
+        <p class="mb-0 w-auto ml-5">
+          Print listing of corrections written?
+        </p>
+        <input type="checkbox" class="mr-1 ml-2 w-auto outline-0">
+      </div>
+      <div class="row mx-0 mt-2 mb-0">
+        <p class="mb-0 w-auto" style="margin-left: 1.8rem!important;">
+          Write follow-up records?
+        </p>
+        <input type="checkbox" class="mr-1 ml-2 w-auto outline-0" checked="checked">
+        <p class="mb-0 w-auto" style="margin-left: 3.1rem!important;">
+          Print listing of follow-ups written?
+        </p>
+        <input type="checkbox" class="mr-1 ml-2 w-auto outline-0">
+      </div>
+      <div class="row mx-0 mt-2 mb-0">
+        <p class="mb-0 w-auto" style="margin-left: 2.3rem!important;">
+          Write deletion records?
+        </p>
+        <input type="checkbox" class="mr-1 ml-2 w-auto outline-0" checked="checked">
+        <p class="mb-0 w-auto" style="margin-left: 3.5rem!important;">
+          Print listing of deletions written?
+        </p>
+        <input type="checkbox" class="mr-1 ml-2 w-auto outline-0">
+      </div>
+      <div class="row mx-0 mt-2 mb-0">
+        <p class="mb-0 w-auto" style="margin-left: 4rem!important;">
+          Max cases per file:
+        </p>
+        <input type="text" class="form-control-file ml-2 w-10 text-right" value="0">
+        <p class="mb-0 w-auto" style="margin-left: 4.9rem!important;">
+          Print summery report?
+        </p>
+        <input type="checkbox" class="mr-1 ml-2 w-auto outline-0">
+      </div>
+      <div class="row mx-0 mt-2 mb-0">
+        <p class="mb-0 w-auto" style="margin-left: 3rem!important;">
+          Compress output file:
+        </p>
+        <input type="checkbox" class="mr-1 ml-2 w-auto outline-0" checked="checked">
+      </div>
+      <div class="row mx-0 mt-2 mb-0">
+        <div class="col-7">
+          <div class="row m-0">
+            <p class="mb-0 w-auto" style="margin-left: 6rem!important;">
+              Password:
+            </p>
+            <input type="text" class="form-control-file ml-2 w-30 text-right" value="0">
+          </div>
+          <div class="row mx-0 mt-2 mb-0">
+            <p class="mb-0 w-auto ml-4">
+              Write deletion records?
+            </p>
+            <input type="checkbox" class="mr-1 ml-2 w-auto outline-0" checked="checked">
+          </div>
+          <div class="row mx-0 mt-2 mb-0">
+            <p class="mb-0 w-auto ml-4">
+              Write deletion records?
+            </p>
+            <input type="checkbox" class="mr-1 ml-2 w-auto outline-0" checked="checked">
+          </div>
+        </div>
+        <div class="col-4 ml-3">
+          <fieldset class="scheduler-border">
+            <legend class="scheduler-border m-0">Sort Log By</legend>
+            <div class="row mx-0 mt-0 mb-0">
+              <input type="checkbox" class="mr-1 ml-2 w-auto outline-0" checked="checked">
+              <p class="mb-0 w-auto ml-1">
+                Accession No
+              </p>
+            </div>
+            <div class="row mx-0 mt-2 mb-0">
+              <input type="checkbox" class="mr-1 ml-2 w-auto outline-0" checked="checked">
+              <p class="mb-0 w-auto ml-1">
+                Patient Name
+              </p>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+
+      <div class="row mx-0 mb-3 mt-4">
+          <div class="col-auto text-left m-0">
+              <button class="mbutton px-3">Counts</button>
+              </div>
+        <div class="col text-right m-0">
+          <button class="mbutton px-3"><i class="fas fa-check mr-2 text-success"></i><u>O</u>K</button>
+          <button class="mbutton mx-2 px-3"><i class="fas fa-times mr-2 text-danger"></i><u>C</u>ancel</button>
+          <button class="mbutton px-3"><i class="fas fa-question mr-2 text-info "></i><u>H</u>elp</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
