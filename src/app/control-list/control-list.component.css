@@ -1,0 +1,88 @@
+.h-custom{
+    height: 84vh;
+    }
+    input{
+        width: 250px;
+        background-color: #ffffff;
+        font-size: 12px;
+        outline: 2px solid #d2d2d2;
+        height: 20px;
+    } 
+    .sinput{
+        width: 50px;
+        background-color: #ffffff;
+        font-size: 12px;
+        outline: 2px solid #d2d2d2;
+        height: 20px;
+    }
+    .card{
+        background-color: #f0f0f0;
+        width: 550px;
+        border:1px solid #00a0fd;
+        box-shadow: 1px 1px 8px 0px #888888;
+    }
+    p{
+        font-size: 12px;
+        width: 135px;
+        text-align: right;
+    }
+    .closebtn{
+        right: 0px;
+        position: absolute;
+        background: none;
+        border: none;
+        padding: 0px;
+        margin-top: -4px !important;
+        cursor: pointer;
+    }
+    button:focus, button:hover{
+        outline: none !important;
+        background-color: transparent !important;
+          }
+    
+    .mbutton{
+        font-size: 12px;
+        background-color: #f0f0f0;
+    }
+    .mbutton .fas{
+        font-size: 14px;
+    }
+    .outline-0{
+        outline: 0px;
+    }
+    .mlc {
+        margin-left: 7.5rem!important;
+    }
+    .lh{
+        line-height: 14px;
+    }
+    .ml-19 {
+        margin-left: 1.9rem!important;
+    }
+    select{
+        width: 250px;
+        outline: 2px solid #d2d2d2;
+        font-size: 12px;
+        height: 20px;
+    } 
+    .w-110 {
+        width: 110px !important;
+    }
+    .w-10 {
+        width: 10%!important;
+    }
+    .w-90 {
+        width: 90%!important;
+    }
+    fieldset.scheduler-border {
+        border: 1px groove #d2d2d2 ;
+        padding: 0.4em !important;
+    }
+    
+        legend.scheduler-border {
+            font-size: 12px !important;
+            text-align: left !important;
+            width:auto;
+            padding:0 5px;
+            border-bottom:none;
+        }
