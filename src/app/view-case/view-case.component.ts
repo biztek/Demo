@@ -293,6 +293,138 @@ export class ViewCaseComponent implements OnInit {
   hasNestedChild = (_: number, nodeData: FileNode) => !nodeData.type;
 
   private _getChildren = (node: FileNode) => node.children;
+  nodes = [
+    {
+      id: 1,
+      name: 'Abstract',
+      children: [
+        { id: 2, name: 'Registry',
+        children: [
+          { id: 21, name: 'ID' },
+          { id: 21, name: 'Activity History' },
+        ]
+       },
+        { id: 3, name: 'Patient',
+        children: [
+          { id: 31, name: 'Name and Address' },
+          { id: 32, name: 'Demographics' },
+          { id: 33, name: 'Payer' },
+          { id: 34, name: 'Ocupation' },
+        ]
+       },
+        { id: 4, name: 'Case',
+        children: [
+          { id: 41, name: 'Identification' },
+          { id: 42, name: 'Physicians',
+          children: [
+            { id: 421, name: 'Physicains #1' },
+            { id: 422, name: 'Physicains #2' },
+            { id: 423, name: 'Physicains #3' },
+            { id: 424, name: 'Physicains #4' },
+            { id: 425, name: 'Physicains #5' },
+            { id: 426, name: 'Physicains #6' },
+            { id: 427, name: 'Physicains #7' },
+          ]
+        },
+          { id: 43, name: 'Consultation' },
+        ]
+      },
+        { id: 5, name: 'PE/Scans',
+        children: [
+          { id: 51, name: 'Text' },
+          { id: 52, name: 'Secondary DX' },
+          { id: 53, name: 'Global Clinical Guidelines' },
+          { id: 54, name: 'Family History' },
+          { id: 55, name: 'Patient History' },
+        ]
+      },
+        { id: 6, name: 'Laboratory',
+        children: [
+          { id: 61, name: 'Scopes/Labs' },
+          { id: 62, name: 'CBC' },
+          { id: 63, name: 'Tumor Makers' },
+        ]
+      },
+        { id: 7, name: 'Pathology',
+        children: [
+          { id: 71, name: 'Cancer' },
+          { id: 72, name: 'Reports',
+          children: [
+            { id: 721, name: 'Reports #1' },
+          ]
+        },
+          { id: 73, name: 'Site' },
+        ]
+      },
+        { id: 8, name: 'Staging',
+        children: [
+          { id: 81, name: 'Diagnostic Procedures' },
+          { id: 82, name: 'Collaborative Stage' },
+          { id: 83, name: 'Distant Metastasis',
+          children: [
+            { id: 721, name: 'Distant Metastasis #1' },
+          ]
+        },
+          { id: 84, name: 'CS Derived' },
+          { id: 85, name: 'Tumor Data' },
+          { id: 86, name: 'Other' },
+       ]
+      },
+      { id: 9, name: 'Treatment',
+      children: [
+        { id: 91, name: 'General' },
+        { id: 92, name: 'Surgery' },
+        { id: 93, name: 'Radiation' },
+        { id: 94, name: 'Hormone' },
+        { id: 95, name: 'Other RX' },
+        { id: 96, name: 'Protocol' },
+
+      ]
+    },
+
+        { id: 10, name: 'Follow-Up',
+        children: [
+          { id: 101, name: 'Patient Status' },
+          { id: 102, name: 'Notes' },
+          { id: 103, name: 'Contacts' },
+          { id: 104, name: 'Resources' },
+        ]
+      },
+        { id: 15, name: 'Remarks',
+        children: [
+          { id: 151, name: 'Text, Misc' },
+          { id: 152, name: 'Regional Fields' },
+          { id: 153, name: 'Text, Remarks' },
+          { id: 154, name: 'User Fields' },
+        ]
+      },
+        { id: 11, name: 'Administrative',
+        children: [
+          { id: 111, name: 'Encounters',
+          children: [
+            { id: 1111, name: 'Encounters #1' },
+          ]
+        },
+          { id: 112, name: 'Summary' },
+        ]
+      },
+        { id: 12, name: 'Indicators',
+        children: [
+          { id: 131, name: 'JCAHO' },
+          { id: 131, name: 'Clinical' },
+        ]
+      },
+        { id: 13, name: 'Overrides',
+        children: [
+          { id: 131, name: 'Flags' },
+        ]
+      },
+        { id: 14, name: 'PCE' }
+      ]
+    },
+  
+  ];
+  options = {};
 
   ngOnInit() {
   }
