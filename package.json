@@ -24,6 +24,7 @@
     "@angular/router": "^6.1.0",
     "ag-grid-angular": "^19.0.0",
     "ag-grid-community": "^19.0.0",
+    "angular-tree-component": "^8.0.0",
     "core-js": "^2.5.4",
     "npm": "^6.4.1",
     "rxjs": "^6.0.0",
