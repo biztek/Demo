@@ -6,9 +6,37 @@
    2. Filter
 
 -->
+
+<div class="bg-light">
+  <a href="#" class="ml-0"><i class="fas fa-folder "></i></a>
+  <a href="#" class="mr-3"><i class="fas fa-folder-open "></i></a>
+  <a href="#"><i class="fas fa-image"></i></a>
+  <a href="#"><i class="fas fa-images  "></i></a>
+  <a href="#" class="mr-3"><i class="fas fa-image  "></i></a>
+  <a href="#"><i class="fas fa-print  "></i></a>
+  <a href="#"><i class="fas fa-columns"></i></a>
+  <a href="#"><i class="fas fa-newspaper  "></i></a>
+  <a href="#" class="mr-3"><i class="fas fa-file-alt  "></i></a>
+  <a href="#"><i class="fas fa-calculator  "></i></a>
+  <a href="#"><i class="fas fa-list  "></i></a>
+  <a href="#"><i class="fas fa-check text-danger "></i></a>
+  <a href="#"><i class="fas fa-question text-success "></i></a>
+  <a href="#" class="mr-3"><i class="fas fa-clipboard-list  "></i></a>
+  <a href="#"><i class="fas fa-link  "></i></a>
+  <a href="#"><i class="fas fa-unlink  "></i></a>
+  <a href="#"><i class="fas fa-key  "></i></a>
+  <a href="#"><i class="fas fa-minus "></i></a>
+  <a href="#" class="mr-3"><i class="fas fa-plus  "></i></a>
+  <a href="#"><i class="fas fa-print "></i></a>
+  <a href="#"><i class="fas fa-file-archive  "></i></a>
+  <a href="#" class="mr-3"><i class="fas fa-sync-alt  "></i></a>
+  <a href="#"><i class="fas fa-times text-danger"></i></a>
+  <a href="#"><i class="fas fa-question  text-warning"></i></a>
+</div>
+
 <div class="row m-0">
   <div class="col p-0" style="overflow-y: scroll;height: 650px;background-color: #f0f0f0; border-right: 2px solid #a0a0a0;">
-    <ul class="nav nav-tabs pt-3 pl-0" id="myTab" role="tablist">
+    <ul class="nav nav-tabs mt-1 pl-0" id="myTab" role="tablist">
       <li class="nav-item">
         <a class="nav-link active" id="fieldsearch-tab" data-toggle="tab" href="#fieldsearch" role="tab" aria-controls="abstract"
           aria-selected="true">Field Search</a>
@@ -21,139 +49,125 @@
     <!-- 1  -->
     <div class="tab-content" id="myTabContent">
       <div class="tab-pane fade show active" id="fieldsearch" role="tabpanel" aria-labelledby="fieldsearch-tab">
-        <div class="example-small-box mat-elevation-z4" style="width: 99%; display: table;" >
-          <!-- 1.1 -->
-          <div class="div-display-table">
-
-            <div style="width: 380px; display: table-cell;">
-
-              <p class="cnext-bold-fond" style="margin-left: 100px;"> <b>Search for</b></p>
-              <ul>
-                <li>
-                  &nbsp;&nbsp;&nbsp;
-                  Last ,First <input type="text" class="input-last-firt">
-                </li>
-                <li>
-                  Accession #
-                  <input type="text" class="input-common">
-                </li>
-                <li>
-                  Med Rec No
-                  <input type="text" class="input-common">
-                </li>
-              </ul>
-            </div>
-            <div class="div-display-table" >
-              
-              <p class="cnext-bold-fond"> <b>Sort #:</b></p>
-              <ul>
-                <li>
-                  <input type="text" class="input-small">
-                  <button class="buttom-common" style="width:100px;">
-                    <img src="assets/binoculars.png" width="20" height="13"> Find
-                  </button>
-
-                  <input type="number" style="width:40px !important;height: 23px;margin-left:15px;">
-
-                  <span style="margin-left:10px"> Birth Date
-                    <input type="text" style="height: 23px;margin-left: 5px"></span>
-                  <input type="text" class="input-small2">
-
-                </li>
-                <li style="margin-top:-.5px">
-                  <input type="text" class="input-small">
-
-                  <mat-checkbox style="margin-left: 16px">Suspense case only</mat-checkbox>
-
-                  <span style="margin-left:33px">
-                    SSN<input type="text" style="height: 23px;margin-left: 10px">
-                  </span>
-
-                  <input type="text" class="input-small2">
-                </li>
-                <li style="margin-top:-.5px">
-                  <input type="text"  class="input-small">
-
-
-                  <button type="reset" class="buttom-common">
-                    <img src="assets/img_259125.png" width="15" height="10">
-                    Clear All
-                  </button>
-
-                  <span style="margin-left:85px">
-                    Facility
-                    <mat-select style="margin-left: 10px;width:203px;" class="matselect" placeholder="Toppings"
-                      [formControl]="toppings" multiple>
-                      <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
-                    </mat-select>
-                  </span>
-
-                  <input type="text" class="input-small2">
-
-                  <mat-checkbox style="margin-left:20px">All</mat-checkbox>
-                </li>
-              </ul>
-            </div>
-          </div>
-
+        <div class="row m-0 my-1">
+          <p class="font-weight-bold font-italic ttext mlc mb-0 mr-4">
+            Search for:
+          </p>
+          <p class="font-weight-bold font-italic ttext ml-5 mb-0">
+            Sort #:
+          </p>
+        </div>
+        <div class="row m-0 mb-2 mt-2">
+          <p class="mb-1 ml-5 w-auto">
+            Last, First
+          </p>
+          <input type="text" class="ml-1">
+          <input type="text" class="ml-3 sinput">
+          <button class="mbutton px-1 py-0 ml-3"><i class="fas fa-binoculars text-dark border-0"></i>Find</button>
+          <select class="ml-2 custom-select p-0" style="width: 50px;">
+            <option value="1">10</option>
+            <option value="1">20</option>
+            <option value="1">30</option>
+            <option value="1">40</option>
+            <option value="1">50</option>
+          </select>
+          <p class="mb-1 w-auto" style="margin-left: 2.1rem!important;">
+            Birth Date
+          </p>
+          <input type="text" class="ml-1 w2">
+          <input type="text" class="sinput ml-2">
+        </div>
+        <div class="row m-0 mb-2 mt-2">
+          <p class="mb-1 w-auto" style="margin-left: 2.1rem!important;">
+            Accession #
+          </p>
+          <input type="text" class="ml-1 w2">
+          <input type="text" class="sinput" style="margin-left: 3.5rem!important;">
+          <input type="checkbox" class="ml-3 w-auto outline-0 text-muted" checked="checked">
+          <p class="mb-0 w-auto ml-1 text-muted">
+            Suspense cases only
+          </p>
+          <p class="mb-1 w-auto" style="margin-left: 3.8rem!important;">
+            SSN
+          </p>
+          <input type="text" class="ml-1 w2">
+          <input type="text" class="sinput ml-2">
+        </div>
+        <div class="row m-0 mb-2 mt-2">
+          <p class="mb-1 ml-4 w-auto" style="margin-left: 2rem!important;">
+            Med Rec No
+          </p>
+          <input type="text" class="ml-1 w2">
+          <input type="text" class="sinput" style="margin-left: 3.4rem!important;">
+          <button class="mbutton px-1 py-0 ml-3"><i class="fas fa-eraser text-dark border-0"></i><u>C</u>lear All</button>
+          <p class="mb-1 w-auto" style="margin-left: 3.5rem">
+            Facility:
+          </p>
+          <select class="ml-2" style="width: 200px;">
+            <option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</option>
+          </select>
+          <input type="text" class="sinput ml-2">
+          <input type="checkbox" class="ml-4 mr-1 w-auto outline-0 text-muted">
+          <p class="mb-0 w-auto ml-0 text-muted">
+            All
+          </p>
         </div>
         <!-- 1.2 -->
         <ag-grid-angular style="width: 100%; height: 300px;" class="ag-theme-balham" [enableSorting]="true"
-          [enableFilter]="true" [enableColResize]=true [rowData]="rowData" [columnDefs]="columnDefs"    
-          (rowClicked)="onRowClicked()" rowSelection="multiple">
+          [enableFilter]="true" [enableColResize]=true [rowData]="rowData" [columnDefs]="columnDefs" (rowClicked)="onRowClicked()"
+          rowSelection="multiple">
         </ag-grid-angular>
       </div>
       <!-- 2 -->
       <div class="tab-pane fade" id="filter" role="tabpanel" aria-labelledby="filter-tab">
-        <div>
-          <div class="example-small-box mat-elevation-z4" style="width: 99%; display: table;">
-            <ul>
-              <li style="margin-top:5px;">
-                Recourd source:
-                <mat-select class="matselect" placeholder="Record" [formControl]="record">
-                  <mat-option *ngFor="let record of recordList" [value]="record">{{record}}</mat-option>
-                </mat-select>
-              </li>
-              <li>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                File/Sub-File:
-                <mat-select class="matselect" placeholder="File/ Sub-File"
-                  [formControl]="file">
-                  <mat-option *ngFor="let file of fileList" [value]="file">{{file}}</mat-option>
-                </mat-select>
-
-                <button type="reset" class ="button-filtertab" style="margin-left: 1%">Properties
-                </button>
-                &nbsp; &nbsp;
-                <mat-checkbox style="margin-top:25px;">Basic</mat-checkbox>
-
-              </li>
-              <li>
-                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+            <div class="row m-0 mb-2 mt-2">
+              <p class="mb-1 ml-5 w-auto">
+                Record source:
+              </p>
+             <select class="ml-2 p-0" style="width: 230px;">
+                <option *ngFor="let record of recordList" [value]="record">{{record}}</option>
+              </select>
+            </div>
+            <div class="row m-0 mb-2 mt-2">
+                <p class="mb-1 w-auto" style="margin-left: 3.1rem!important;">
+                  Filter/Sub-File:
+                </p>
+                <select class="ml-2 p-0" style="width: 230px;">
+                    <option *ngFor="let file of fileList" [value]="file">{{file}}</option>
+                  </select>
+                <button class="mbutton px-1 py-0 ml-3"><i class="fas fa-sliders-h border-0"></i>Properties</button>               
+                <input type="checkbox" class="ml-4 mt-1 mr-1 w-auto outline-0 text-muted">
+                <p class="mb-0 mt-1 w-auto ml-0 text-muted">
+                  Basic
+                </p>
+              </div>
+            <div class="row m-0 mb-2 mt-2">
+              <p class="mb-1 w-auto" style="margin-left: 5.4rem!important;">
                 Facility:
-
-                <mat-select class="matselect" placeholder="Facility"
-                  [formControl]="toppings" multiple>
-                  <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
-                </mat-select>
-                <mat-checkbox style="margin-left:1%;;">All</mat-checkbox>
-              </li>
-              <li>
-                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-                Sort by:
-
-                <mat-select class="matselect" placeholder="Sort by" [formControl]="sortby" style="margin-left: 5px;">
-                  <mat-option *ngFor="let sortby of sortbyList" [value]="sortby">{{sortby}}</mat-option>
-                </mat-select>
-
-
-                <button type="reset"  class ="button-filtertab" style="margin-left: 5%">
-                  <img src="assets/tick.png" width="15" height="10">Execute
-                </button>
-              </li>
-            </ul>
-          </div>
-        </div>
+              </p>
+              <select class="ml-2 w2">
+                  <option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</option>
+                </select>
+              <input type="checkbox" class="ml-3 mt-1 w-auto outline-0 text-muted">
+              <p class="mb-0 w-auto ml-1 mt-1 text-muted">
+                All
+              </p>
+            </div>
+            <div class="row m-0 mb-2 mt-2">
+                <p class="mb-1 w-auto" style="margin-left: 5.3rem!important;">
+                  Sort by:
+                </p>
+                <select class="ml-2 p-0 w2 mr-5">
+                    <option *ngFor="let sortby of sortbyList" [value]="sortby">{{sortby}}</option>
+                  </select>
+                <button class="mbutton px-1 py-0 ml-5"><i class="fas fa-check text-success border-0"></i>Execute</button>
+              </div>
+            
+            <!-- 1.2 -->
+            <ag-grid-angular style="width: 100%; height: 300px;" class="ag-theme-balham" [enableSorting]="true"
+              [enableFilter]="true" [enableColResize]=true [rowData]="rowData" [columnDefs]="columnDefs" (rowClicked)="onRowClicked()"
+              rowSelection="multiple">
+            </ag-grid-angular>
       </div>
     </div>
     <app-footer></app-footer>
