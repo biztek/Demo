@@ -1,0 +1,116 @@
+<div class="container-fluid h-custom">
+  <div class="row h-custom justify-content-center align-items-center">
+    <div class="card">
+      <div class="row m-0 bg-white p-1">
+        <img src="/src/resources/logo.png" width="16px" height="16px">
+        <p class="mb-0 ml-2">Case List</p>
+        <button class="closebtn mr-3 mb-1" [routerLink]="['/home']" routerLinkActive="router-link-active">
+          <i class="fas fa-times text-secondary"></i></button>
+      </div>
+      <div class="row m-0 mb-2 mt-2">
+        <p class="mb-1 ml-2 w-auto">
+          Record sources:
+        </p>
+        <select class="ml-2">
+          <option value="1">Database, Filtered</option>
+          <option value="1">Database, Unfiltered</option>
+        </select>
+      </div>
+      <div class="row m-0 mb-2">
+        <p class="mb-1 w-auto text-muted" style="margin-left: 1rem">
+          Filter/Sub-File:
+        </p>
+        <select class="ml-2" disabled="disabled">
+          <option value="1"></option>
+          <option value="1">New Filter</option>
+        </select>
+        <button class="mbutton px-1 py-0 ml-3" disabled="disabled"><i class="fas fa-sliders-h text-secondary"></i>Properties</button>
+        <input type="checkbox" class="ml-3 mr-1 w-auto outline-0">
+        <p class="mb-0 w-auto ml-0">
+          Basic
+        </p>
+      </div>
+      <div class="row m-0 mb-2">
+        <p class="mb-1  w-auto" style="margin-left: 3.4rem">
+          Facility:
+        </p>
+        <select class="ml-2 w-40">
+          <option value="1"> MARQUETTE</option>
+          <option value="1">BALDWIN</option>
+          <option value="1">MADISON</option>
+        </select>
+        <input type="checkbox" class="ml-4 mr-1 w-auto outline-0 text-muted">
+        <p class="mb-0 w-auto ml-0 text-muted">
+          All
+        </p>
+      </div>
+
+      <div class="row m-0 mb-2">
+        <p class="mb-1  w-auto text-muted" style="margin-left: 3.7rem">
+          Level:
+        </p>
+        <div class="row ml-2 border pt-1 w-75">
+          <input type="radio" class="mr-3 ml-2 w-auto outline-0 text-muted" disabled="disabled">
+          <p class="mb-0 w-auto ml-1 text-muted">
+            Patient
+          </p>
+          <input type="radio" class="mr-3 ml-5 w-auto outline-0 text-muted" disabled="disabled">
+          <p class="mb-0 w-auto ml-1 text-muted">
+            Tumor
+          </p>
+          <input type="radio" class="mr-1 ml-5 w-auto outline-0 text-muted" disabled="disabled">
+          <p class="mb-0 w-auto ml-1 text-muted">
+            Hospital
+          </p>
+        </div>
+      </div>
+      <div class="row m-0 mb-2 mt-3">
+        <p class="mb-1 w-auto" style="margin-left: 1rem">
+          Report format name:
+        </p>
+        <select class="ml-2">
+          <option value="1">New Report</option>
+          <option value="1">Accession List</option>
+          <option value="1">Name List</option>
+          <option value="1">Site List</option>
+        </select>
+        <button class="mbutton px-1 py-0 ml-3" disabled="disabled"><i class="fas fa-sliders-h text-secondary"></i>Properties</button>
+      </div>
+      <div class="row m-0 mb-1">
+        <p class="mb-0 w-auto ml-2">
+          Print Line Number?
+        </p>
+        <input type="checkbox" class="ml-1 mr-1 w-auto outline-0">
+      </div>
+      <div class="row m-0 mb-2">
+          <p class="mb-0 w-auto ml-2">
+            Indicated Repeats?<br> [like this: "-> data"]
+          </p>
+          <input type="checkbox" class="ml-1 mr-1 w-auto outline-0" checked="checked">
+          <p class="mb-0 w-auto" style="margin-left: 4rem!important;">
+              Older Style report? [each repeat on a separate row]
+            </p>
+            <input type="checkbox" class="ml-1 mr-1 w-auto outline-0">
+        </div>
+        <div class="row m-0 mb-1">
+            <p class="mb-0 w-auto" style="margin-left: 2rem!important;">
+              Open in Excel?
+            </p>
+            <input type="checkbox" class="ml-1 mr-1 w-auto outline-0">
+          </div>
+          <div class="row m-0 mb-1">
+              <p class="mb-0 w-auto" style="margin-left: 1.5rem!important;">
+                Include Counts?
+              </p>
+              <input type="checkbox" class="ml-1 mr-1 w-auto outline-0">
+            </div>
+      <div class="row mx-0 mb-3 mt-4">
+        <div class="col text-right m-0">
+          <button class="mbutton px-3"><i class="fas fa-check mr-2 text-success"></i><u>O</u>K</button>
+          <button class="mbutton mx-2 px-3"><i class="fas fa-times mr-2 text-danger"></i><u>C</u>ancel</button>
+          <button class="mbutton px-3"><i class="fas fa-question mr-2 text-info "></i><u>H</u>elp</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

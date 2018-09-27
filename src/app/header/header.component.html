@@ -149,8 +149,8 @@
           </mat-menu>
   
           <mat-menu #caselists="matMenu">
-            <button mat-menu-item>Menue Sub 1</button>
-            <button mat-menu-item>Menue Sub 2</button>
+            <button mat-menu-item [routerLink]="['/run-case']" routerLinkActive="router-link-active">Run Case List</button>
+            <button mat-menu-item>Manage Case Lists</button>
           </mat-menu>
   
           <mat-menu #sitetable="matMenu">

@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { ImportCasesComponent } from './import-cases/import-cases.component';
 import { TransmitCasesComponent } from './transmit-cases/transmit-cases.component';
 import { CasImportComponent } from './cas-import/cas-import.component';
+import { RunCaseComponent } from './run-case/run-case.component';
 
 // component url paths
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
 {path: 'import-cases',component: ImportCasesComponent },
 {path: 'transmit-cases',component: TransmitCasesComponent },
 {path: 'cas-import',component: CasImportComponent },
+{path: 'run-case',component: RunCaseComponent },
 ];
 
 @NgModule({
