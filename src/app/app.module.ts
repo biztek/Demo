@@ -28,8 +28,8 @@ import { ImportCasesComponent } from './import-cases/import-cases.component';
 import { TransmitCasesComponent } from './transmit-cases/transmit-cases.component';
 import { CasImportComponent } from './cas-import/cas-import.component';
 import { TreeModule } from 'angular-tree-component';
+import { RunCaseComponent } from './run-case/run-case.component';
 import { ControlListComponent } from './control-list/control-list.component';
-
 
 @NgModule({
   declarations: [
@@ -47,6 +47,7 @@ import { ControlListComponent } from './control-list/control-list.component';
     ImportCasesComponent,
     TransmitCasesComponent,
     CasImportComponent,
+    RunCaseComponent
     ControlListComponent
   ],
   imports: [
