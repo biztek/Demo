@@ -11,7 +11,7 @@ import { ImportCasesComponent } from './import-cases/import-cases.component';
 import { TransmitCasesComponent } from './transmit-cases/transmit-cases.component';
 import { CasImportComponent } from './cas-import/cas-import.component';
 import { RunCaseComponent } from './run-case/run-case.component';
-
+import { ControlListComponent } from './control-list/control-list.component';
 // component url paths
 const routes: Routes = [
 {path: 'view-find',component: ViewComponent },
@@ -22,6 +22,7 @@ const routes: Routes = [
 {path: 'transmit-cases',component: TransmitCasesComponent },
 {path: 'cas-import',component: CasImportComponent },
 {path: 'run-case',component: RunCaseComponent },
+{path: 'control-list',component: ControlListComponent },
 ];
 
 @NgModule({

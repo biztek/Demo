@@ -83,9 +83,9 @@
           <button mat-button [matMenuTriggerFor]="mfollowup" class="btn btn-link text-dark nounderline no-hover-effect" [disableRipple]="true" color="primary">Follow-Up</button>
   
           <mat-menu #mfollowup="matMenu" overlapTrigger="false" class="mat-elevation-z4">
-            <button mat-menu-item>Add</button>
-            <button mat-menu-item>Tabulate</button>
-            <button mat-menu-item>Control List...</button>
+            <button mat-menu-item class="text-muted">Add</button>
+            <button mat-menu-item class="text-muted">Tabulate</button>
+            <button mat-menu-item [routerLink]="['/control-list']" routerLinkActive="router-link-active">Control List...</button>
             <button mat-menu-item>Worksheet...</button>
             <button mat-menu-item>Delinquent List...</button>
             <button mat-menu-item [matMenuTriggerFor]="filteredresource">Filtered Resource</button>
