@@ -28,6 +28,7 @@ import { ImportCasesComponent } from './import-cases/import-cases.component';
 import { TransmitCasesComponent } from './transmit-cases/transmit-cases.component';
 import { CasImportComponent } from './cas-import/cas-import.component';
 import { TreeModule } from 'angular-tree-component';
+import { ControlListComponent } from './control-list/control-list.component';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { TreeModule } from 'angular-tree-component';
     OpenDatabaseComponent,
     ImportCasesComponent,
     TransmitCasesComponent,
-    CasImportComponent
+    CasImportComponent,
+    ControlListComponent
   ],
   imports: [
     BrowserModule,
