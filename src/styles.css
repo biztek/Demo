@@ -4,9 +4,13 @@
 @import "~ag-grid-community/dist/styles/ag-theme-balham.css";
 @import '~angular-tree-component/dist/angular-tree-component.css';
 
+@font-face {
+  font-family: myFont;
+  src: url('assets/Lato/Lato-Regular.ttf') format('truetype');
+}
 
 html, body { height: 100%; }
-body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;background-color: #f0f0f0;}
+body { margin: 0; font-family: myFont, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;background-color: #f0f0f0;}
 
 .no-hover-effect.mat-button.mat-primary .mat-button-focus-overlay,
 .no-hover-effect.mat-button.mat-accent .mat-button-focus-overlay,

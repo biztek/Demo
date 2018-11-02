@@ -47,7 +47,7 @@ import { ControlListComponent } from './control-list/control-list.component';
     ImportCasesComponent,
     TransmitCasesComponent,
     CasImportComponent,
-    RunCaseComponent
+    RunCaseComponent,
     ControlListComponent
   ],
   imports: [
