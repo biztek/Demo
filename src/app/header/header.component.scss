@@ -1,7 +1,28 @@
 .app-header {
   background: #FFF !important;
   height: 80px;
+  border-bottom: 1px solid #efefef;
+  .navbar-toggler {
+    position: absolute;
+    right: 10px;
+  }
+  .collapse.show {
+    .menu-list {
+      min-width: 300px;
+      background: #FFF;
+      padding: 10px;
+      border-top: 1px solid;
+      border-left: 1px solid;
+      border-bottom: 1px solid;
+      li{
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+    }
+  }
   ul {
+    position: absolute;
+    right: 10px;
     li {
       button {
         font-family: myFont;
@@ -16,14 +37,12 @@
     }
   }
   .app-logo {
-    height: 80px !important;
     .app-logo-img {
       display: inline !important;
       margin-right: 10px;
     }
     .app-logo-text{
       font-weight: bold;
-      color: #8d0085;
     }
   }
 
@@ -32,27 +51,31 @@
   }
 
   .mat-menu-item {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 38px;
     height: 38px;
   }
 
-  button:focus, button:hover{
-    outline: none !important;
-    background-color: lightblue !important;
-  }
-  .mat-menu-panel {
-    background-color: #f0f0f0 !important;
-  }
-
   .btn{
     font-weight: 500 !important;
-    font-size: 13px;
+    font-size: 17px;
     line-height: 25px;
     margin-top: 2px !important;
-  }
-  .mat-button{
-    min-width: 0px;
-    padding: 0px 10px;
+    font-weight: bold;
+    text-transform: uppercase;
   }
 }
+.mat-menu-panel {
+  background-color: #fff !important;
+  margin-top: 25px;
+  min-width: 300px !important;
+}
+.mat-menu-content:not(:empty) {
+  background: #FFF !important;
+}
+button:focus, button:hover{
+  outline: none !important;
+  background-color: aliceblue !important;
+}
+
+

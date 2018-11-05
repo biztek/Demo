@@ -3,11 +3,19 @@
 @import "~ag-grid-community/dist/styles/ag-grid.css";
 @import "~ag-grid-community/dist/styles/ag-theme-balham.css";
 @import '~angular-tree-component/dist/angular-tree-component.css';
+@import '~@angular/material/theming';
+
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
 
 @font-face {
   font-family: myFont;
   src: url('assets/Lato/Lato-Regular.ttf') format('truetype');
 }
+
+$custom-typography: mat-typography-config($font-family: 'myFont');
+@include mat-core($custom-typography);
 
 html, body { height: 100%; }
 body { margin: 0; font-family: myFont, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;background-color: #f0f0f0;}
