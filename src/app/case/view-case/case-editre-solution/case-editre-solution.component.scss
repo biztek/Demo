@@ -1,0 +1,9 @@
+@import "~src/sass/variables";
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+.app-view-editre{
+    border: 3px solid $theme;
+    height: 84vh;
+}

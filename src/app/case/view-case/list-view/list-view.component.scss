@@ -1,0 +1,18 @@
+@import "~src/sass/variables";
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+.app-table {
+  border: 3px solid $theme;
+  td, th {
+    border: 1px solid $themeShade;
+  }
+  .table-active, .table-active>td, .table-active>th {
+    background-color: $themeShade;
+    color: $brown;
+    font-weight: bold;
+  }
+  .table thead th, td {
+    padding: 3px !important;
+  }
+}

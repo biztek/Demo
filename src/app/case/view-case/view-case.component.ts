@@ -274,7 +274,7 @@ export class FileDatabase {
 @Component({
   selector: 'app-view-case',
   templateUrl: './view-case.component.html',
-  styleUrls: ['./view-case.component.css'],
+  styleUrls: ['./view-case.component.scss'],
   providers: [FileDatabase],
   
 })
