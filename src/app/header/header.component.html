@@ -16,7 +16,7 @@
             class="btn btn-link text-dark nounderline no-hover-effect" [disableRipple]="true" color="primary">File</button>
 
         <mat-menu #mfile="matMenu" overlapTrigger="false" class="mat-elevation-z4">
-          <button mat-menu-item class="border-0">New Database</button>
+          <button mat-menu-item class="border-0" [routerLink]="['/new-database']">New Database</button>
           <button mat-menu-item [routerLink]="['/open-database']" routerLinkActive="router-link-active">Open Database</button>
           <mat-divider></mat-divider>
           <button mat-menu-item [matMenuTriggerFor]="importm">Import</button>
@@ -52,7 +52,7 @@
           <mat-menu #mcase="matMenu" overlapTrigger="false" class="mat-elevation-z4">
             <button mat-menu-item>New Case</button>
             <button mat-menu-item>Update Case</button>
-            <button mat-menu-item [routerLink]="['/view-find']" routerLinkActive="router-link-active" >View Case</button>
+            <button mat-menu-item [routerLink]="['/view-case']" routerLinkActive="router-link-active" >View Case</button>
             <button mat-menu-item>Print Case</button>
             <button mat-menu-item>Delete Case</button>
           </mat-menu>

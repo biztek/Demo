@@ -214,15 +214,26 @@ tree-root .angular-tree-component-rtl .tree-children {
 
 // application styles
 .app-menu-bar {
-  background: #f0cbf7; //#c3caef
-  height: 50px;
-  .fas, .fab {
-    font-size: 20px;
-    border: 1px solid #d643cb;  //#1c2ad2
-    margin-top: 8px;
+  background: $white;
+  height: auto;
+  font-size: 20px;
+  border-bottom: 1px solid;
+  .icon-block {
+    border: 1px solid $theme;
+    border-radius: 9px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    margin-left: 10px;
+  }
+  a {
+    color: rgba(0, 0, 0, 0.75)!important;
+    // padding: 4px 10px;
+    // border: 1px solid $theme;
+    margin: 5px;
     border-radius: 5px;
-    padding: 6px;
-    background-color: #F0F0F0;
+  }
+  a:hover {
+    color: $theme !important;
   }
 }
 

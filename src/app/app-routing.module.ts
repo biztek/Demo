@@ -3,11 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 
 //imported components
 import { ViewComponent } from './view/view.component';
-import { ViewCaseComponent } from './view-case/view-case.component';
+import { ViewCaseComponent } from './case/view-case/view-case.component';
 import { OpenDatabaseComponent } from './file/open-database/open-database.component';
 import { NewDatabaseComponent } from './file/new-database/new-database.component';
 import { HomeComponent } from './home/home.component';
-import { ImportCasesComponent } from './import-cases/import-cases.component';
+import { ImportCasesComponent } from './file/import-cases/import-cases.component';
 import { TransmitCasesComponent } from './transmit-cases/transmit-cases.component';
 import { CasImportComponent } from './cas-import/cas-import.component';
 import { RunCaseComponent } from './run-case/run-case.component';
