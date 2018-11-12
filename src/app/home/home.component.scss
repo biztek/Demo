@@ -1,0 +1,51 @@
+@import "~src/sass/variables";
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+.section1{
+  height: auto;
+  position: relative;
+}
+.section1:after {
+  content:"";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: url("../../assets/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.2;
+}
+
+.app-home {
+  .home-block {
+    background: rgba(255, 255, 255, 0.8);
+    height: 100%;
+    .title {
+      color: $theme;
+      font-size: 24px;
+    }
+    .content {
+      font-size: 17px !important;
+    }
+  }
+
+  .section2 {
+    background: rgba(255, 255, 255, 0.8);
+    .product-block {
+      height: 100%;
+      border: 1px solid $theme;
+      border-radius: 9px;
+      .title {
+        color: $theme;
+      }
+      .content{
+        margin-top: 10px;
+      }
+    }
+  }
+}

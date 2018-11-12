@@ -1,0 +1,73 @@
+@import "~src/sass/variables";
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+.section1{
+  height: 100vh;
+  position: relative;
+}
+.section1:after {
+  content:"";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: url("../../../assets/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.2;
+}
+
+.app-form {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+// .h-custom{
+//  height: 84vh;
+// }
+// input{
+//     width: 400px;
+//     background-color: #f0f0f0;
+//     font-size: 12px;
+//     outline: 2px solid #d2d2d2;
+//     height: 20px;
+// } 
+// select{
+//     width: 400px;
+//     outline: 2px solid #d2d2d2;
+//     font-size: 12px;
+//     height: 20px;
+// } 
+// .card{
+//     background-color: #f0f0f0;
+//     width: 500px;
+//     border:1px solid #00a0fd;
+//     box-shadow: 1px 1px 8px 0px #888888;
+// }
+// p{
+//     font-size: 12px;
+// }
+// .closebtn{
+//     right: 0px;
+//     position: absolute;
+//     background: none;
+//     border: none;
+//     padding: 0px;
+//     margin-top: -4px !important;
+//     cursor: pointer;
+// }
+// button:focus, button:hover{
+//     outline: none !important;
+//     background-color: transparent !important;
+//       }
+
+// .mbutton{
+//     font-size: 12px;
+//     background-color: #f0f0f0;
+// }
+// .mbutton .fas{
+//     font-size: 14px;
+// }

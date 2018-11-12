@@ -1,13 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import "~ag-grid-community/dist/styles/ag-grid.css";
 @import "~ag-grid-community/dist/styles/ag-theme-balham.css";
 @import '~angular-tree-component/dist/angular-tree-component.css';
 @import '~@angular/material/theming';
 
-@import '~bootstrap/scss/functions';
-@import '~bootstrap/scss/variables';
-@import '~bootstrap/scss/mixins';
+@import "~src/sass/variables";
 
 @font-face {
   font-family: myFont;
@@ -209,3 +211,83 @@ tree-root .angular-tree-component-rtl .tree-children {
 .expand-tree div.angular-tree-component>tree-node>div::before {
   left: 14px
 }
+
+// application styles
+.app-menu-bar {
+  background: #f0cbf7; //#c3caef
+  height: 50px;
+  .fas, .fab {
+    font-size: 20px;
+    border: 1px solid #d643cb;  //#1c2ad2
+    margin-top: 8px;
+    border-radius: 5px;
+    padding: 6px;
+    background-color: #F0F0F0;
+  }
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.content {
+  font-size: 17px  !important;
+}
+
+.title {
+  font-size: 24px;
+}
+
+.big-title {
+  font-size: 32px;
+}
+
+.text-theme {
+  color: $theme !important;
+}
+
+.theme-btn {
+  background: $theme !important;
+  color: $white !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.form-btn {
+  border: 1px solid $theme;
+  padding: 10px 12px;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.form-btn:hover {
+  background : $theme; 
+  color: $white;
+}
+
+.bg-theme {
+  background: $theme;
+}
+
+.theme-input {
+  height: 50px;
+  border-radius: 1px solid #dfdfdf;
+  border-radius: 0px;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.theme-input:focus, .theme-input:active {
+  border: 1px solid $theme;
+}
+
+.app-link, .app-link:hover {
+  font-size: 16px;
+  color: $theme;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+

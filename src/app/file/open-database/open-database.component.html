@@ -1,0 +1,37 @@
+<div class="section1 row pb-5 pt-5 app-open-db">
+  <div class="col-12 col-sm-10 offset-sm-1 col-md-8 md-offset-2 col-lg-6 offset-lg-3">
+    <div class="row content app-form shadow-lg">
+        <div class="col-12 p-3 bg-theme">
+            <span class="title text-white font-weight-bold">Open Database</span>
+            <button class="pull-right text-white bg-theme border-0" [routerLink]="['/home']" routerLinkActive="router-link-active">
+              <i class="fa fa-times fa-2x"></i></button>
+        </div>
+        <div class="form-group col-12 pt-4">
+          <label for="currentdatabase">Current Database</label>
+          <input type="text" class="form-control theme-input" id="currentdatabase" placeholder="name@example.com">
+        </div>
+        <div class="form-group mt-3 col-12">
+          <label for="dbtoopen">Database to open</label>
+          <select class="form-control theme-input" id="dbtoopen">
+            <option>TRN</option>
+            <option>TRN 1</option>
+            <option>TRN 2</option>
+            <option>TRN 3</option>
+            <option>TRN 4</option>
+          </select>
+        </div>
+
+        <div class="col-12 text-left mt-3 col-12">
+          <button class="btn form-btn mr-3 mt-2"><i class="fas fa-sliders-h mr-2 text-secondary"></i><u>P</u>roperties</button>
+          <button class="btn form-btn mr-3 mt-2"><u>R</u>egister Database</button>
+          <button class="btn form-btn mr-3 mt-2"><u>U</u>nrigister Database</button>
+        </div>
+
+        <div class="col-12 text-right pb-5 mt-4 col-12">
+          <button class="btn form-btn ml-3"><i class="fas fa-check mr-2 text-success"></i><u>O</u>K</button>
+          <button class="btn form-btn ml-3"><i class="fas fa-times mr-2 text-danger"></i><u>C</u>ancel</button>
+          <button class="btn form-btn ml-3"><i class="fas fa-question mr-2 text-info "></i><u>H</u>elp</button>
+        </div>
+    </div>
+  </div>
+</div>

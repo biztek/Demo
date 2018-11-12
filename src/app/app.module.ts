@@ -17,19 +17,20 @@ import { ListViewComponent } from './view-case/list-view/list-view.component';
 import { WindowFrameComponent } from './window-frame/window-frame.component';
 import { FormsModule,ReactiveFormsModule }   from '@angular/forms';
 import { AgGridModule } from 'ag-grid-angular';
-import {MatButtonModule, MatCheckboxModule} from '@angular/material';
-import {MatCardModule} from '@angular/material/card';
-import {MatSelectModule} from '@angular/material/select';
-import {MatTableModule} from '@angular/material/table';
+import { MatButtonModule, MatCheckboxModule } from '@angular/material';
+import { MatCardModule } from '@angular/material/card';
+import { MatSelectModule } from '@angular/material/select';
+import { MatTableModule } from '@angular/material/table';
 import { CaseEditComponent } from './view-case/case-edit/case-edit.component';
 import { CaseEditreSolutionComponent } from './view-case/case-editre-solution/case-editre-solution.component';
-import { OpenDatabaseComponent } from './open-database/open-database.component';
+import { OpenDatabaseComponent } from './file/open-database/open-database.component';
 import { ImportCasesComponent } from './import-cases/import-cases.component';
 import { TransmitCasesComponent } from './transmit-cases/transmit-cases.component';
 import { CasImportComponent } from './cas-import/cas-import.component';
 import { TreeModule } from 'angular-tree-component';
 import { RunCaseComponent } from './run-case/run-case.component';
 import { ControlListComponent } from './control-list/control-list.component';
+import { NewDatabaseComponent } from './file/new-database/new-database.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { ControlListComponent } from './control-list/control-list.component';
     TransmitCasesComponent,
     CasImportComponent,
     RunCaseComponent,
-    ControlListComponent
+    ControlListComponent,
+    NewDatabaseComponent
   ],
   imports: [
     BrowserModule,

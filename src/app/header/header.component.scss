@@ -1,81 +1,137 @@
+@import "~src/sass/variables";
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
 .app-header {
-  background: #FFF !important;
+  background: $theme !important;
   height: 80px;
   border-bottom: 1px solid #efefef;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
   .navbar-toggler {
     position: absolute;
     right: 10px;
+    top: 20px;
+    padding: 0.25rem;
+    border-color: $white;
+    background: none !important;
+    .navbar-toggler-icon {
+      background: none !important;
+      height: auto;
+      color: $white;
+      font-size: 30px;
+    }
   }
   .collapse.show {
     .menu-list {
       min-width: 300px;
-      background: #FFF;
+      background: $white;
       padding: 10px;
       border-top: 1px solid;
       border-left: 1px solid;
       border-bottom: 1px solid;
       li{
-        margin-top: 5px;
-        margin-bottom: 5px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        .btn {
+          font-weight: normal !important;
+          padding: 0 16px !important;
+        }
       }
     }
+    .btn{
+      color: $black !important;
+    }
   }
-  ul {
+  .menu-list {
     position: absolute;
     right: 10px;
     li {
-      button {
-        font-family: myFont;
-        font-size: 18px;
-        color: #000 !important;
-      }
-      button:hover {
+      .btn:hover, .btn:focus {
         font-weight: bold !important;
-        color: #8d0085 !important;
-        background: #FFF !important;
+        background: none !important;
+      }
+      .btn{
+        font-weight: 500 !important;
+        font-size: 17px;
+        line-height: 25px;
+        margin-top: 2px !important;
+        font-weight: bold !important;
+        text-transform: uppercase;
+        color: $white !important;
       }
     }
   }
   .app-logo {
+    margin-left: 1rem;
     .app-logo-img {
       display: inline !important;
       margin-right: 10px;
+      position: relative;
+      top: -10px;
+      height: 40px;
     }
     .app-logo-text{
       font-weight: bold;
+      color: $white;
+      font-size: 3rem;
     }
   }
-
   .nounderline {
     text-decoration: none !important
   }
+}
 
-  .mat-menu-item {
-    font-size: 14px;
-    line-height: 38px;
-    height: 38px;
-  }
+@include media-breakpoint-down(lg) {
+    .app-header{
+      .menu-list {
+        li {
+          .btn {
+            padding: 0 8px !important;
+          }
+        }
+      }
+      .app-logo {
+        .app-logo-text {
+          font-size: 2rem;
+        }
+      }
+    }
+}
 
-  .btn{
-    font-weight: 500 !important;
-    font-size: 17px;
-    line-height: 25px;
-    margin-top: 2px !important;
-    font-weight: bold;
-    text-transform: uppercase;
+@include media-breakpoint-down(sm) {
+  .app-header{
+    .menu-list {
+      li {
+        .btn {
+          font-size: 15px !important
+        }
+      }
+    }
   }
 }
+
+// Material overrides
 .mat-menu-panel {
-  background-color: #fff !important;
+  background-color: $white !important;
   margin-top: 25px;
   min-width: 300px !important;
+  max-height: 450px !important;
+  overflow: auto;
 }
 .mat-menu-content:not(:empty) {
-  background: #FFF !important;
+  background: $white !important;
+}
+.mat-menu-item {
+  font-size: 15px;
 }
 button:focus, button:hover{
   outline: none !important;
-  background-color: aliceblue !important;
+  background-color: $theme !important;
+  color: $white !important;
 }
+
 
 
