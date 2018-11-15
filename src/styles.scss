@@ -246,14 +246,16 @@ tree-root .angular-tree-component-rtl .tree-children {
 
 .title {
   font-size: 24px;
+  color: $darktheme;
 }
 
 .big-title {
   font-size: 32px;
+  font-weight: bold;
 }
 
 .text-theme {
-  color: $theme !important;
+  color: $darktheme !important;
 }
 
 .theme-btn {
@@ -281,10 +283,11 @@ tree-root .angular-tree-component-rtl .tree-children {
 
 .theme-input {
   height: 50px;
-  border-radius: 1px solid #dfdfdf;
+  border: 1px solid #d6c7c7;
   border-radius: 0px;
   outline: none !important;
   box-shadow: none !important;
+  border-radius: 12px;
 }
 
 .theme-input:focus, .theme-input:active {
@@ -293,11 +296,27 @@ tree-root .angular-tree-component-rtl .tree-children {
 
 .app-link, .app-link:hover {
   font-size: 16px;
-  color: $theme;
+  color: $darktheme;
 }
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.bg-white {
+  background: white !important;
+}
+
+.expand-collapse {
+  background: url("./assets/images/expand.svg") no-repeat 0 0 transparent;
+  height: 20px;
+  width: 20px;
+  background-size: 100%;
+  float: right;
+}
+
+[aria-expanded='true'] span.expand-collapse {
+  transform: rotate(45deg);
 }
 
 

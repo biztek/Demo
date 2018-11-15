@@ -61,3 +61,58 @@
     font-weight: 700 !important;
   }
 }
+
+.expand-tree .angular-tree-component{
+  font-size: 16px !important;
+}
+
+.collapsible-list{
+  margin-top: 15px !important;
+  background: $litethemeShade !important;
+  border-radius: 25px;
+  border: 2px solid $theme;
+  padding: 30px 10px;
+  .parent-item {
+    // background: $themeShade;
+    padding: 20px;
+    border-bottom: 1px solid $darktheme;
+    // background: $white;
+    
+  }
+  .list1{
+    
+    
+  }
+  .list1 {
+    li {
+      padding: 10px;
+      border-bottom: 1px solid $darktheme;
+      a {
+        padding: 10px;
+      }
+      a[aria-expanded="true"] {
+        background: $white;
+        // padding: 10px;
+        color: $darktheme !important;
+      }
+    }
+  }
+
+  .list2 {
+    li {
+      padding: none !important;
+      border: none !important;
+      a {
+        padding: 0 !important;
+      }
+    } 
+  }
+  a {
+    width: 100%;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    color: $black !important;
+    font-weight: bold;
+  }
+}

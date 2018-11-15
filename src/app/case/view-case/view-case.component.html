@@ -44,9 +44,31 @@
   </div>
 </div>
 
-<div class="row content">
-  <div class="col-2 pt-2 px-0 pb-0" style="overflow-y: scroll;height: 90vh;background-color: white">
-    <tree-root [ngClass]="'expand-tree'" [nodes]="nodes" [options]="options"></tree-root>
+<div class="row bg-white">
+  <div class="col-2 pt-2 px-0 pb-0 collapsible-list" style="overflow-y: scroll;height: 90vh;">
+    <!-- <tree-root [ngClass]="'expand-tree'" [nodes]="nodes" [options]="options"></tree-root> -->
+
+    <ul class="list-unstyled">
+      <li *ngFor="let item1 of nodes">
+        <a class="parent-item" data-toggle="collapse" href="#list{{item1.id}}" role="button" aria-expanded="false" >
+          {{item1.name}}
+          <span class="expand-collapse"></span>
+        </a>
+        <ul class="list-unstyled collapse list1" id="list{{item1.id}}">
+          <li *ngFor="let item2 of item1.children">
+            <a data-toggle="collapse" href="#list{{item2.id}}" role="button" aria-expanded="false" >
+              {{item2.name}}
+              <span class="expand-collapse"></span>
+            </a>
+            <ul class="list-unstyled collapse list2" id="list{{item2.id}}">
+              <li *ngFor="let item3 of item2.children">
+                <a href="javascript:void(0);" role="button">{{item3.name}}</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
   </div>
   <div class="col p-0 app-grid">
     <ul class="nav nav-tabs pt-3 pl-0" id="myTab" role="tablist">
