@@ -1,0 +1,25 @@
+<div class="section1 row pb-5 pt-5 app-open-db">
+  <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-xl-6 offset-xl-3">
+    <div class="row content app-form shadow-lg mb-5">
+        <div class="col-12 p-3 bg-theme">
+            <span class="title text-white font-weight-bold">Reload Cases</span>
+            <button class="pull-right text-white bg-theme border-0" [routerLink]="['/home']" routerLinkActive="router-link-active">
+              <i class="fa fa-times fa-2x"></i></button>
+        </div>
+
+        <mat-form-field class="col-12 mt-3">
+          <input matInput type="text" [(ngModel)]="server" placeholder="Input File name">
+        </mat-form-field>
+
+        <mat-checkbox class="col-12 mt-5">Print background color?</mat-checkbox>
+        <mat-checkbox class="col-12 mt-3">Automatic Linking/Consolidation?</mat-checkbox>
+        
+        <div class="col-12 text-right pb-5 mt-5 col-12">
+          <button class="btn form-btn ml-3"><i class="fas fa-check mr-2 text-success"></i><u>O</u>K</button>
+          <button class="btn form-btn ml-3"><i class="fas fa-times mr-2 text-danger"></i><u>C</u>ancel</button>
+          <button class="btn form-btn ml-3"><i class="fas fa-question mr-2 text-info "></i><u>H</u>elp</button>
+        </div>
+    </div>
+  </div>
+</div>
+

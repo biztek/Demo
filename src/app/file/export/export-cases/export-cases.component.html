@@ -1,0 +1,99 @@
+<div class="section1 row pb-5 pt-5 app-open-db">
+  <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-xl-6 offset-xl-3">
+    <div class="row content app-form shadow-lg mb-5">
+      <div class="col-12 p-3 bg-theme">
+        <span class="title text-white font-weight-bold">Export Cases</span>
+        <button class="pull-right text-white bg-theme border-0" [routerLink]="['/home']" routerLinkActive="router-link-active">
+          <i class="fa fa-times fa-2x"></i></button>
+      </div>
+
+      <mat-form-field class="col-12 mt-3">
+        <mat-select placeholder="Record source">
+          <mat-option value="4.0">Microsoft HET OLED8 4.0</mat-option>
+          <mat-option value="5.0">Microsoft HET OLED8 5.0</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div class="row mt-3 mx-0 w-100">
+        <mat-form-field class="col-10">
+          <mat-select placeholder="Filter/Sub file">
+            <mat-option value="4.0">Microsoft HET OLED8 4.0</mat-option>
+            <mat-option value="5.0">Microsoft HET OLED8 5.0</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-checkbox class="col-2 mt-3">Basic</mat-checkbox>
+      </div>
+
+      <div class="row mt-3 mx-0 w-100">
+        <mat-form-field class="col-10">
+          <mat-select placeholder="Facility">
+            <mat-option value="4.0">Microsoft HET OLED8 4.0</mat-option>
+            <mat-option value="5.0">Microsoft HET OLED8 5.0</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-checkbox class="col-2 mt-3">All</mat-checkbox>
+      </div>
+
+      <mat-form-field class="col-12 col-lg-4 mt-3">
+        <input matInput type="text" [(ngModel)]="startoutputwithrecord" placeholder="Start output with record">
+        <button mat-button *ngIf="startoutputwithrecord" matSuffix mat-icon-button aria-label="Clear" (click)="startoutputwithrecord=''">
+          <mat-icon><span class="fa fa-times"></span></mat-icon>
+        </button>
+      </mat-form-field>
+
+      <mat-checkbox class="col-12 col-md-6 col-lg-4 mt-3" style="position: relative; top: 15px;">Output all recods</mat-checkbox>
+
+      <mat-form-field class="col-12 col-md-6 col-lg-4 mt-3">
+        <input matInput type="text" [(ngModel)]="outputmaximum" placeholder="Output Maximum of">
+        <button mat-button *ngIf="outputmaximum" matSuffix mat-icon-button aria-label="Clear" (click)="outputmaximum=''">
+          <mat-icon><span class="fa fa-times"></span></mat-icon>
+        </button>
+      </mat-form-field>
+
+      <mat-form-field class="col-12 mt-3">
+        <mat-select placeholder="Output file name">
+          <mat-option value="4.0">Microsoft HET OLED8 4.0</mat-option>
+          <mat-option value="5.0">Microsoft HET OLED8 5.0</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="col-12 mt-3">
+        <mat-select placeholder="Output format name">
+          <mat-option value="4.0">Microsoft HET OLED8 4.0</mat-option>
+          <mat-option value="5.0">Microsoft HET OLED8 5.0</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-radio-group class="col-12 mt-3">
+        <label class="mr-4">Output file type:</label>
+        <mat-radio-button value="1" class="mr-3">Export</mat-radio-button>
+        <mat-radio-button value="2" class="mr-3">DBase</mat-radio-button>
+        <mat-radio-button value="2" class="mr-3">XML</mat-radio-button>
+        <mat-radio-button value="2" class="mr-3">Access</mat-radio-button>
+        <mat-radio-button value="2" class="">CSV</mat-radio-button>
+      </mat-radio-group>
+
+      <mat-radio-group class="col-12 mt-3">
+        <label>Output column names should be:</label>
+        <mat-radio-button value="1" class="col-12 mt-2">CNExT item Id</mat-radio-button>
+        <mat-radio-button value="2" class="col-12 mt-2">CNExT item name</mat-radio-button>
+        <mat-radio-button value="2" class="col-12 mt-2">Format descriptor file item name</mat-radio-button>
+        <mat-radio-button value="2" class="col-12 mt-2">None</mat-radio-button>
+      </mat-radio-group>
+
+      <div class="row mx-0 mt-3 mb-3">
+        <mat-checkbox class="col-12 col-md-6 mt-2">Print list of records written</mat-checkbox>
+        <mat-checkbox class="col-12 col-md-6 mt-2">Trailing commas in CSV</mat-checkbox>
+        <mat-checkbox class="col-12 col-md-6 mt-2">Compress output file</mat-checkbox>
+        <mat-checkbox class="col-12 col-md-6 mt-2">Double quotes in CSV</mat-checkbox>
+        <mat-checkbox class="col-12 col-md-6 mt-2">Export labeled fields using state codes</mat-checkbox>
+      </div>
+
+      <div class="col-12 text-right pb-5 mt-4 col-12">
+        <button class="btn form-btn ml-3"><i class="fas fa-check mr-2 text-success"></i><u>O</u>K</button>
+        <button class="btn form-btn ml-3"><i class="fas fa-times mr-2 text-danger"></i><u>C</u>ancel</button>
+        <button class="btn form-btn ml-3"><i class="fas fa-question mr-2 text-info "></i><u>H</u>elp</button>
+      </div>
+    </div>
+  </div>
+</div>

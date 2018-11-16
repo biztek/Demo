@@ -1,0 +1,79 @@
+<div class="section1 row pb-5 pt-5 app-open-db">
+  <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-xl-6 offset-xl-3">
+    <div class="row content app-form shadow-lg mb-5">
+        <div class="col-12 p-3 bg-theme">
+            <span class="title text-white font-weight-bold">Transmit Cases</span>
+            <button class="pull-right text-white bg-theme border-0" [routerLink]="['/home']" routerLinkActive="router-link-active">
+              <i class="fa fa-times fa-2x"></i></button>
+        </div>
+
+        <mat-form-field class="col-12 mt-3">
+          <input matInput type="text" [(ngModel)]="outputfoldername" placeholder="Output folder name">
+          <button mat-button *ngIf="outputfoldername" matSuffix mat-icon-button aria-label="Clear" (click)="outputfoldername=''">
+            <mat-icon><span class="fa fa-times"></span></mat-icon>
+          </button>
+        </mat-form-field>
+
+        <mat-form-field class="col-12 mt-3">
+          <input matInput type="text" [(ngModel)]="outputfilename" placeholder="Output file name">
+          <button mat-button *ngIf="outputfilename" matSuffix mat-icon-button aria-label="Clear" (click)="outputfilename=''">
+            <mat-icon><span class="fa fa-times"></span></mat-icon>
+          </button>
+        </mat-form-field>
+
+        <mat-form-field class="col-12 mt-3">
+          <input matInput type="text" [(ngModel)]="outputformatname" placeholder="Output format name">
+          <button mat-button *ngIf="outputformatname" matSuffix mat-icon-button aria-label="Clear" (click)="outputformatname=''">
+            <mat-icon><span class="fa fa-times"></span></mat-icon>
+          </button>
+        </mat-form-field>
+
+        <div class="row mt-4 mx-0 w-100">
+          <mat-form-field class="col-10">
+            <mat-select placeholder="Facility">
+              <mat-option value="4.0">Microsoft HET OLED8 4.0</mat-option>
+              <mat-option value="5.0">Microsoft HET OLED8 5.0</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-checkbox class="col-2 mt-3">All</mat-checkbox>
+        </div>
+
+        <div class="row mt-4 mx-0 w-100">
+          <div class="col-12 col-lg-6">
+            <mat-checkbox class="mt-3 row mx-0 px-3">Write new case records?</mat-checkbox>
+            <mat-checkbox class="mt-3 row mx-0 px-3">Write correction records?</mat-checkbox>
+            <mat-checkbox class="mt-3 row mx-0 px-3">Write follow-up records?</mat-checkbox>
+            <mat-checkbox class="mt-3 row mx-0 px-3">Write Deletion records</mat-checkbox>
+            <mat-form-field class="mt-2 row mx-0 px-3">
+              <input matInput type="text" placeholder="Max cases per file">
+            </mat-form-field>
+            <mat-checkbox class="mt-3 row mx-0 px-3">Compress output file</mat-checkbox>
+            <mat-form-field class="mt-2 row mx-0 px-3">
+              <input matInput type="text" placeholder="Password">
+            </mat-form-field>
+            <mat-checkbox class="mt-3 row mx-0 px-3">Run edits on M records</mat-checkbox>
+            <mat-checkbox class="mt-3 row mx-0 px-3">Maryland transmit class 30</mat-checkbox>
+          </div>
+          <div class="col-12 col-lg-6">
+            <mat-checkbox class="mt-3 row mx-0 px-3">Print listing of cases transmitted?</mat-checkbox>
+            <mat-checkbox class="mt-3 row mx-0 px-3">Print listing of corrections written?</mat-checkbox>
+            <mat-checkbox class="mt-3 row mx-0 px-3">Print listing of follow-ups written?</mat-checkbox>
+            <mat-checkbox class="mt-3 row mx-0 px-3">Print listing of deletions written?</mat-checkbox>
+            <mat-checkbox class="mt-3 row mx-0 px-3">Print Summary report?</mat-checkbox>
+            <mat-radio-group class="row mt-3 mx-0 px-3">
+              <label class="mr-5">Sort Log by:</label> 
+              <mat-radio-button value="1" class="mr-4">Accession number</mat-radio-button>
+              <mat-radio-button value="2" class="mr-4">Patient Name</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        
+        <div class="col-12 text-right pb-5 mt-4 col-12">
+          <button class="btn form-btn ml-3"><i class="fas fa-check mr-2 text-success"></i><u>O</u>K</button>
+          <button class="btn form-btn ml-3"><i class="fas fa-times mr-2 text-danger"></i><u>C</u>ancel</button>
+          <button class="btn form-btn ml-3"><i class="fas fa-question mr-2 text-info "></i><u>H</u>elp</button>
+        </div>
+    </div>
+  </div>
+</div>
+

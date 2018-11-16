@@ -24,13 +24,16 @@ import { MatTableModule } from '@angular/material/table';
 import { CaseEditComponent } from './case/view-case/case-edit/case-edit.component';
 import { CaseEditreSolutionComponent } from './case/view-case/case-editre-solution/case-editre-solution.component';
 import { OpenDatabaseComponent } from './file/open-database/open-database.component';
-import { ImportCasesComponent } from './file/import-cases/import-cases.component';
-import { TransmitCasesComponent } from './transmit-cases/transmit-cases.component';
+import { ImportCasesComponent } from './file/import/import-cases/import-cases.component';
+import { TransmitCasesComponent } from './file/export/transmit-cases/transmit-cases.component';
 import { CasImportComponent } from './cas-import/cas-import.component';
 import { TreeModule } from 'angular-tree-component';
 import { RunCaseComponent } from './run-case/run-case.component';
 import { ControlListComponent } from './control-list/control-list.component';
 import { NewDatabaseComponent } from './file/new-database/new-database.component';
+import { SharedFollowUpComponent } from './file/import/shared-follow-up/shared-follow-up.component';
+import { ReloadCasesComponent } from './file/import/reload-cases/reload-cases.component';
+import { ExportCasesComponent } from './file/export/export-cases/export-cases.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +53,10 @@ import { NewDatabaseComponent } from './file/new-database/new-database.component
     CasImportComponent,
     RunCaseComponent,
     ControlListComponent,
-    NewDatabaseComponent
+    NewDatabaseComponent,
+    SharedFollowUpComponent,
+    ReloadCasesComponent,
+    ExportCasesComponent
   ],
   imports: [
     BrowserModule,

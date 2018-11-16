@@ -7,12 +7,14 @@ import { ViewCaseComponent } from './case/view-case/view-case.component';
 import { OpenDatabaseComponent } from './file/open-database/open-database.component';
 import { NewDatabaseComponent } from './file/new-database/new-database.component';
 import { HomeComponent } from './home/home.component';
-import { ImportCasesComponent } from './file/import-cases/import-cases.component';
-import { TransmitCasesComponent } from './transmit-cases/transmit-cases.component';
+import { ImportCasesComponent } from './file/import/import-cases/import-cases.component';
+import { TransmitCasesComponent } from './file/export/transmit-cases/transmit-cases.component';
 import { CasImportComponent } from './cas-import/cas-import.component';
 import { RunCaseComponent } from './run-case/run-case.component';
 import { ControlListComponent } from './control-list/control-list.component';
-
+import { SharedFollowUpComponent } from './file/import/shared-follow-up/shared-follow-up.component';
+import { ReloadCasesComponent } from './file/import/reload-cases/reload-cases.component';
+import { ExportCasesComponent } from './file/export/export-cases/export-cases.component';
 // component url paths
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -26,6 +28,9 @@ const routes: Routes = [
   {path: 'cas-import', component: CasImportComponent },
   {path: 'run-case', component: RunCaseComponent },
   {path: 'control-list', component: ControlListComponent },
+  {path: 'shared-follow-up', component: SharedFollowUpComponent},
+  {path: 'reload-cases', component: ReloadCasesComponent},
+  {path: 'export-cases', component: ExportCasesComponent},
 ];
 
 @NgModule({
