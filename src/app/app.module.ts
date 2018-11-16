@@ -34,6 +34,7 @@ import { NewDatabaseComponent } from './file/new-database/new-database.component
 import { SharedFollowUpComponent } from './file/import/shared-follow-up/shared-follow-up.component';
 import { ReloadCasesComponent } from './file/import/reload-cases/reload-cases.component';
 import { ExportCasesComponent } from './file/export/export-cases/export-cases.component';
+import { RetransmitCasesComponent } from './file/export/retransmit-cases/retransmit-cases.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { ExportCasesComponent } from './file/export/export-cases/export-cases.co
     NewDatabaseComponent,
     SharedFollowUpComponent,
     ReloadCasesComponent,
-    ExportCasesComponent
+    ExportCasesComponent,
+    RetransmitCasesComponent
   ],
   imports: [
     BrowserModule,

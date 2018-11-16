@@ -15,6 +15,8 @@ import { ControlListComponent } from './control-list/control-list.component';
 import { SharedFollowUpComponent } from './file/import/shared-follow-up/shared-follow-up.component';
 import { ReloadCasesComponent } from './file/import/reload-cases/reload-cases.component';
 import { ExportCasesComponent } from './file/export/export-cases/export-cases.component';
+import { RetransmitCasesComponent } from './file/export/retransmit-cases/retransmit-cases.component';
+
 // component url paths
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -31,6 +33,7 @@ const routes: Routes = [
   {path: 'shared-follow-up', component: SharedFollowUpComponent},
   {path: 'reload-cases', component: ReloadCasesComponent},
   {path: 'export-cases', component: ExportCasesComponent},
+  {path: 'retransmit-cases', component: RetransmitCasesComponent},
 ];
 
 @NgModule({
