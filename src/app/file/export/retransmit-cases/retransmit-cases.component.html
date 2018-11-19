@@ -34,20 +34,18 @@
         <mat-checkbox class="col-2 mt-3">All</mat-checkbox>
       </div>
 
-      <mat-form-field class="col-12 col-lg-4 mt-3">
-        <input matInput type="text" [(ngModel)]="startoutputwithrecord" placeholder="Start output with record">
-        <button mat-button *ngIf="startoutputwithrecord" matSuffix mat-icon-button aria-label="Clear" (click)="startoutputwithrecord=''">
-          <mat-icon><span class="fa fa-times"></span></mat-icon>
-        </button>
-      </mat-form-field>
+      <mat-radio-group class="col-12 mt-3">
+        <label class="mr-4">Level:</label>
+        <mat-radio-button value="1" class="mr-3">Patient</mat-radio-button>
+        <mat-radio-button value="2" class="mr-3">Tumor</mat-radio-button>
+        <mat-radio-button value="2" class="">Hospital</mat-radio-button>
+      </mat-radio-group>
 
-      <mat-checkbox class="col-12 col-md-6 col-lg-4 mt-3" style="position: relative; top: 15px;">Output all recods</mat-checkbox>
-
-      <mat-form-field class="col-12 col-md-6 col-lg-4 mt-3">
-        <input matInput type="text" [(ngModel)]="outputmaximum" placeholder="Output Maximum of">
-        <button mat-button *ngIf="outputmaximum" matSuffix mat-icon-button aria-label="Clear" (click)="outputmaximum=''">
-          <mat-icon><span class="fa fa-times"></span></mat-icon>
-        </button>
+      <mat-form-field class="col-12 mt-3">
+        <mat-select placeholder="Output Folder name">
+          <mat-option value="4.0">Microsoft HET OLED8 4.0</mat-option>
+          <mat-option value="5.0">Microsoft HET OLED8 5.0</mat-option>
+        </mat-select>
       </mat-form-field>
 
       <mat-form-field class="col-12 mt-3">
@@ -64,29 +62,24 @@
         </mat-select>
       </mat-form-field>
 
-      <mat-radio-group class="col-12 mt-3">
-        <label class="mr-4">Output file type:</label>
-        <mat-radio-button value="1" class="mr-3">Export</mat-radio-button>
-        <mat-radio-button value="2" class="mr-3">DBase</mat-radio-button>
-        <mat-radio-button value="2" class="mr-3">XML</mat-radio-button>
-        <mat-radio-button value="2" class="mr-3">Access</mat-radio-button>
-        <mat-radio-button value="2" class="">CSV</mat-radio-button>
-      </mat-radio-group>
+      <mat-form-field class="col-12 mt-3">
+        <input matInput type="text" [(ngModel)]="maxCasesPerFile" placeholder="Max cases per file">
+        <button mat-button *ngIf="maxCasesPerFile" matSuffix mat-icon-button aria-label="Clear" (click)="maxCasesPerFile=''">
+          <mat-icon><span class="fa fa-times"></span></mat-icon>
+        </button>
+      </mat-form-field>
 
-      <mat-radio-group class="col-12 mt-3">
-        <label>Output column names should be:</label>
-        <mat-radio-button value="1" class="col-12 mt-2">CNExT item Id</mat-radio-button>
-        <mat-radio-button value="2" class="col-12 mt-2">CNExT item name</mat-radio-button>
-        <mat-radio-button value="2" class="col-12 mt-2">Format descriptor file item name</mat-radio-button>
-        <mat-radio-button value="2" class="col-12 mt-2">None</mat-radio-button>
-      </mat-radio-group>
+      <mat-form-field class="col-12 mt-3">
+        <input matInput type="text" [(ngModel)]="password" placeholder="Password">
+        <button mat-button *ngIf="password" matSuffix mat-icon-button aria-label="Clear" (click)="password=''">
+          <mat-icon><span class="fa fa-times"></span></mat-icon>
+        </button>
+      </mat-form-field>
 
       <div class="row mx-0 mt-3 mb-3">
-        <mat-checkbox class="col-12 col-md-6 mt-2">Print list of records written</mat-checkbox>
-        <mat-checkbox class="col-12 col-md-6 mt-2">Trailing commas in CSV</mat-checkbox>
-        <mat-checkbox class="col-12 col-md-6 mt-2">Compress output file</mat-checkbox>
-        <mat-checkbox class="col-12 col-md-6 mt-2">Double quotes in CSV</mat-checkbox>
-        <mat-checkbox class="col-12 col-md-6 mt-2">Export labeled fields using state codes</mat-checkbox>
+        <mat-checkbox class="col-12 mt-2">Compress output file?</mat-checkbox>
+        <mat-checkbox class="col-12 mt-2">Print Listing?</mat-checkbox>
+        <mat-checkbox class="col-12 mt-2">Maryland Transmit Class 30</mat-checkbox>
       </div>
 
       <div class="col-12 text-right pb-5 mt-4 col-12">

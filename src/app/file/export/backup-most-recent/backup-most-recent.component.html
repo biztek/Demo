@@ -1,0 +1,68 @@
+<div class="section1 row pb-5 pt-5 app-open-db">
+  <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-xl-6 offset-xl-3">
+    <div class="row content app-form shadow-lg mb-5">
+      <div class="col-12 p-3 bg-theme">
+        <span class="title text-white font-weight-bold">Backup Latest Data</span>
+        <button class="pull-right text-white bg-theme border-0" [routerLink]="['/home']" routerLinkActive="router-link-active">
+          <i class="fa fa-times fa-2x"></i></button>
+      </div>
+
+      <div class="row mt-4 mx-0 w-100">
+        <mat-form-field class="col-10">
+          <mat-select placeholder="Facility">
+            <mat-option value="4.0">Microsoft HET OLED8 4.0</mat-option>
+            <mat-option value="5.0">Microsoft HET OLED8 5.0</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-checkbox class="col-2 mt-3">All</mat-checkbox>
+      </div>
+
+      <mat-form-field class="col-12 mt-3">
+        <input matInput type="text" [(ngModel)]="outputfoldername" placeholder="Output folder name">
+        <button mat-button *ngIf="outputfoldername" matSuffix mat-icon-button aria-label="Clear" (click)="outputfoldername=''">
+          <mat-icon><span class="fa fa-times"></span></mat-icon>
+        </button>
+      </mat-form-field>
+
+      <mat-form-field class="col-12 mt-3">
+        <input matInput type="text" [(ngModel)]="outputfilename" placeholder="Output file name">
+        <button mat-button *ngIf="outputfilename" matSuffix mat-icon-button aria-label="Clear" (click)="outputfilename=''">
+          <mat-icon><span class="fa fa-times"></span></mat-icon>
+        </button>
+      </mat-form-field>
+
+      <mat-radio-group class="row mt-3 mx-0">
+        <label class="col-12">Choose One:</label>
+        <div class="col-12 col-md-6">
+          <mat-radio-button value="1" class="mt-2 col-12">Today</mat-radio-button>
+          <mat-radio-button value="1" class="mt-2 col-12">Last 2 Days</mat-radio-button>
+          <mat-radio-button value="1" class="mt-2 col-12">Last 3 Days</mat-radio-button>
+          <mat-radio-button value="1" class="mt-2 col-12">Last 4 Days</mat-radio-button>
+          <mat-radio-button value="1" class="mt-2 col-12">Last 5 Days</mat-radio-button>
+        </div>
+        <div class="col-12 col-md-6">
+          <mat-radio-button value="1" class="mt-2 col-12">This Week</mat-radio-button>
+          <mat-radio-button value="1" class="mt-2 col-12">Last 2 Weeks</mat-radio-button>
+          <mat-radio-button value="1" class="mt-2 col-12">Last 3 Weeks</mat-radio-button>
+          <mat-radio-button value="1" class="mt-2 col-12">Last 4 Weeks</mat-radio-button>
+          <mat-radio-button value="1" class="mt-2 col-12">Last 5 Weeks</mat-radio-button>
+        </div>
+      </mat-radio-group>
+
+      <div class="row mx-0 mt-3">
+        <label class="col-12">Choose 1 or more:</label>
+        <div class="row mx-0 pl-3">
+          <mat-checkbox class="col-12 mt-2">Date Completed</mat-checkbox>
+          <mat-checkbox class="col-12 mt-2">Date Entered</mat-checkbox>
+          <mat-checkbox class="col-12 mt-2">Date Last Changed</mat-checkbox>
+        </div>
+      </div>
+
+      <div class="col-12 text-right pb-5 mt-5 col-12">
+        <button class="btn form-btn ml-3"><i class="fas fa-check mr-2 text-success"></i><u>O</u>K</button>
+        <button class="btn form-btn ml-3"><i class="fas fa-times mr-2 text-danger"></i><u>C</u>ancel</button>
+        <button class="btn form-btn ml-3 disabled"><i class="fas fa-question mr-2 text-info "></i><u>H</u>elp</button>
+      </div>
+    </div>
+  </div>
+</div>

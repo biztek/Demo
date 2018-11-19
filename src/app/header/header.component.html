@@ -1,19 +1,20 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light p-0 app-header">
   <div class="navbar-header">
     <a class="navbar-brand app-logo" href="#" routerLink="/home">
-      <img src="/assets/favicon.png" alt="CNExT" height="40" width="40" class="app-logo-img"/>
+      <img src="/assets/favicon.png" alt="CNExT" height="40" width="40" class="app-logo-img" />
       <span class="app-logo-text">CNExT</span>
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+      aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon fa fa-align-justify"></span>
     </button>
   </div>
-  
+
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav pull-right menu-list">
       <li class="nav-item active">
-        <button mat-button [matMenuTriggerFor]="mfile"
-            class="btn btn-link text-dark nounderline no-hover-effect" [disableRipple]="true" color="primary">File</button>
+        <button mat-button [matMenuTriggerFor]="mfile" class="btn btn-link text-dark nounderline no-hover-effect"
+          [disableRipple]="true" color="primary">File</button>
 
         <mat-menu #mfile="matMenu" overlapTrigger="false" class="mat-elevation-z4">
           <button mat-menu-item class="border-0" [routerLink]="['/new-database']">New Database</button>
@@ -34,32 +35,55 @@
         </mat-menu>
 
         <mat-menu #exportm="matMenu">
-          <button mat-menu-item [routerLink]="['/transmit-cases']" routerLinkActive="router-link-active">Transmit Cases...</button>
+          <button mat-menu-item [routerLink]="['/transmit-cases']" routerLinkActive="router-link-active">Transmit
+            Cases...</button>
           <button mat-menu-item routerLink="/export-cases">Export Cases...</button>
           <button mat-menu-item routerLink="/retransmit-cases">Retransmit Cases...</button>
-          <button mat-menu-item>Call for Data</button>
-          <button mat-menu-item>RQRS</button>
-          <button mat-menu-item>Backup Most Recent...</button>
-          <button mat-menu-item>Upload Cases</button>
-          <button mat-menu-item>Unload</button>
-          <button mat-menu-item>Survivorship</button>
+          <button mat-menu-item [matMenuTriggerFor]="exportCallForData">Call for Data</button>
+          <button mat-menu-item [matMenuTriggerFor]="exportRQRS">RQRS</button>
+          <button mat-menu-item [routerLink]="['/backup-most-recent']">Backup Most Recent...</button>
+          <button mat-menu-item disabled>Upload Cases</button>
+          <button mat-menu-item routerLink="/unload">Unload</button>
+          <button mat-menu-item [matMenuTriggerFor]="exportSurvivorship">Survivorship</button>
+        </mat-menu>
+
+        <mat-menu #exportCallForData="matMenu" parentMenu="mfile">
+          <button mat-menu-item [routerLink]="['/callForData/counts-reports']">1. Counts Report</button>
+          <button mat-menu-item [routerLink]="['/callForData/batch-edits']">2. Batch Edits</button>
+          <button mat-menu-item [routerLink]="['/callForData/one-button-export']">3A. One Button Export</button>
+          <button mat-menu-item [routerLink]="['/callForData/export-data']">3B. Export Data</button>
+          <mat-divider></mat-divider>
+          <button mat-menu-item [routerLink]="['/callForData/re-export-data']">4. Re-export Data</button>
+        </mat-menu>
+
+        <mat-menu #exportRQRS="matMenu" parentMenu="mfile">
+          <button mat-menu-item [routerLink]="['/rqrs/batch-edit']">Batch Edit</button>
+          <button mat-menu-item [routerLink]="['/rqrs/export-data']">Export Data</button>
+        </mat-menu>
+
+        <mat-menu #exportSurvivorship="matMenu" parentMenu="mfile">
+            <button mat-menu-item [routerLink]="['/survivorship/export-care-plan']">Export care plan</button>
+            <button mat-menu-item [routerLink]="['/survivorship/timelessness-report']">Timelessness report</button>
+            <button mat-menu-item [routerLink]="['/survivorship/configuration']">Configuration</button>
+            <button mat-menu-item [routerLink]="['/survivorship/template-editor']">Template editor</button>
+        </mat-menu>
+
+      </li>
+      <li class="nav-item">
+        <button mat-button [matMenuTriggerFor]="mcase" class="btn btn-link text-dark nounderline no-hover-effect"
+          [disableRipple]="true" color="primary">Case</button>
+
+        <mat-menu #mcase="matMenu" overlapTrigger="false" class="mat-elevation-z4">
+          <button mat-menu-item>New Case</button>
+          <button mat-menu-item>Update Case</button>
+          <button mat-menu-item [routerLink]="['/view-case']" routerLinkActive="router-link-active">View Case</button>
+          <button mat-menu-item>Print Case</button>
+          <button mat-menu-item>Delete Case</button>
         </mat-menu>
       </li>
       <li class="nav-item">
-          <button mat-button [matMenuTriggerFor]="mcase" 
-          class="btn btn-link text-dark nounderline no-hover-effect" [disableRipple]="true" color="primary">Case</button>
-  
-          <mat-menu #mcase="matMenu" overlapTrigger="false" class="mat-elevation-z4">
-            <button mat-menu-item>New Case</button>
-            <button mat-menu-item>Update Case</button>
-            <button mat-menu-item [routerLink]="['/view-case']" routerLinkActive="router-link-active" >View Case</button>
-            <button mat-menu-item>Print Case</button>
-            <button mat-menu-item>Delete Case</button>
-          </mat-menu>
-        </li>
-      <li class="nav-item">
-        <button mat-button [matMenuTriggerFor]="mcasefinding" 
-        class="btn btn-link text-dark nounderline no-hover-effect" [disableRipple]="true" color="primary">Casefinding</button>
+        <button mat-button [matMenuTriggerFor]="mcasefinding" class="btn btn-link text-dark nounderline no-hover-effect"
+          [disableRipple]="true" color="primary">Casefinding</button>
 
         <mat-menu #mcasefinding="matMenu" overlapTrigger="false" class="mat-elevation-z4">
           <button mat-menu-item [routerLink]="['/cas-import']" routerLinkActive="router-link-active">Import</button>
@@ -88,8 +112,8 @@
         </mat-menu>
       </li>
       <li class="nav-item">
-        <button mat-button [matMenuTriggerFor]="mfollowup" 
-        class="btn btn-link text-dark nounderline no-hover-effect" [disableRipple]="true" color="primary">Follow-Up</button>
+        <button mat-button [matMenuTriggerFor]="mfollowup" class="btn btn-link text-dark nounderline no-hover-effect"
+          [disableRipple]="true" color="primary">Follow-Up</button>
 
         <mat-menu #mfollowup="matMenu" overlapTrigger="false" class="mat-elevation-z4">
           <button mat-menu-item class="text-muted">Add</button>
@@ -133,8 +157,8 @@
         </mat-menu>
       </li>
       <li class="nav-item">
-        <button mat-button [matMenuTriggerFor]="mreports" 
-        class="btn btn-link text-dark nounderline no-hover-effect" [disableRipple]="true" color="primary">Reports</button>
+        <button mat-button [matMenuTriggerFor]="mreports" class="btn btn-link text-dark nounderline no-hover-effect"
+          [disableRipple]="true" color="primary">Reports</button>
 
         <mat-menu #mreports="matMenu" overlapTrigger="false" class="mat-elevation-z4">
           <button mat-menu-item [matMenuTriggerFor]="caselists">Case Lists</button>
@@ -204,8 +228,8 @@
         </mat-menu>
       </li>
       <li class="nav-item">
-        <button mat-button [matMenuTriggerFor]="mphysicians" 
-        class="btn btn-link text-dark nounderline no-hover-effect" [disableRipple]="true" color="primary">Physicians</button>
+        <button mat-button [matMenuTriggerFor]="mphysicians" class="btn btn-link text-dark nounderline no-hover-effect"
+          [disableRipple]="true" color="primary">Physicians</button>
 
         <mat-menu #mphysicians="matMenu" overlapTrigger="false" class="mat-elevation-z4">
           <button mat-menu-item>Merge MD File</button>
@@ -220,8 +244,8 @@
         </mat-menu>
       </li>
       <li class="nav-item">
-        <button mat-button [matMenuTriggerFor]="mtools" 
-        class="btn btn-link text-dark nounderline no-hover-effect" [disableRipple]="true" color="primary">Tools</button>
+        <button mat-button [matMenuTriggerFor]="mtools" class="btn btn-link text-dark nounderline no-hover-effect"
+          [disableRipple]="true" color="primary">Tools</button>
 
         <mat-menu #mtools="matMenu" overlapTrigger="false" class="mat-elevation-z4">
           <button mat-menu-item>Install History</button>
@@ -260,8 +284,8 @@
         </mat-menu>
       </li>
       <li class="nav-item">
-        <button mat-button [matMenuTriggerFor]="mwindow" 
-        class="btn btn-link text-dark nounderline no-hover-effect" [disableRipple]="true" color="primary">Window</button>
+        <button mat-button [matMenuTriggerFor]="mwindow" class="btn btn-link text-dark nounderline no-hover-effect"
+          [disableRipple]="true" color="primary">Window</button>
 
         <mat-menu #mwindow="matMenu" overlapTrigger="false" class="mat-elevation-z4">
           <button mat-menu-item class="border-0">Tile</button>
@@ -270,8 +294,8 @@
         </mat-menu>
       </li>
       <li class="nav-item">
-        <button mat-button [matMenuTriggerFor]="mhelp" 
-        class="btn btn-link text-dark nounderline no-hover-effect" [disableRipple]="true" color="primary">Help</button>
+        <button mat-button [matMenuTriggerFor]="mhelp" class="btn btn-link text-dark nounderline no-hover-effect"
+          [disableRipple]="true" color="primary">Help</button>
 
         <mat-menu #mhelp="matMenu" overlapTrigger="false" class="mat-elevation-z4">
           <button mat-menu-item>Contents and Index</button>

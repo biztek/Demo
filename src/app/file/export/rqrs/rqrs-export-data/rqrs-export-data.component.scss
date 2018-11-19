@@ -1,0 +1,33 @@
+@import "~src/sass/variables";
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+.section1{
+  min-height: 100vh !important;
+  height: auto;
+  position: relative;
+}
+.section1:after {
+  content:"";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: url("../../../../../assets/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.2;
+}
+
+.app-form {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+// Material styles
+.mat-form-field-label-wrapper {
+  font-size: 18px !important;
+}
+

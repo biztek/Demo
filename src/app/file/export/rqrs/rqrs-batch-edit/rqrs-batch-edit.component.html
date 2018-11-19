@@ -1,0 +1,44 @@
+<div class="section1 row pb-5 pt-5 app-open-db">
+  <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-xl-6 offset-xl-3">
+    <div class="row content app-form shadow-lg mb-5">
+      <div class="col-12 p-3 bg-theme">
+        <span class="title text-white font-weight-bold">RQRS Batch Edit Report</span>
+        <button class="pull-right text-white bg-theme border-0" [routerLink]="['/home']" routerLinkActive="router-link-active">
+          <i class="fa fa-times fa-2x"></i></button>
+      </div>
+
+      <div class="row mt-3 mx-0 w-100">
+        <mat-form-field class="col-10">
+          <mat-select placeholder="Facility">
+            <mat-option value="4.0">Microsoft HET OLED8 4.0</mat-option>
+            <mat-option value="5.0">Microsoft HET OLED8 5.0</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-checkbox class="col-2 mt-3">All</mat-checkbox>
+      </div>
+
+      <mat-form-field class="col-12 mt-3">
+        <input matInput type="text" [(ngModel)]="initialDate" placeholder="Initial Date Diagnosis">
+        <button mat-button *ngIf="initialDate" matSuffix mat-icon-button aria-label="Clear" (click)="initialDate=''">
+          <mat-icon><span class="fa fa-times"></span></mat-icon>
+        </button>
+      </mat-form-field>
+
+      <div class="row mx-0 mt-3">
+        <label class="col-12">Site Selection:</label>
+        <mat-checkbox class="pl-5 col-12 mt-2">Print List of Cases</mat-checkbox>
+        <mat-checkbox class="pl-5 col-12 mt-2">Compress Output File</mat-checkbox>
+        <mat-checkbox class="pl-5 col-12 mt-2">Genreate and edits report using the NCDB call for data metafile</mat-checkbox>
+      </div>
+
+      <mat-checkbox class="col-12 mt-5">Include Summary of error counts bu edit</mat-checkbox>
+
+      <div class="col-12 text-right pb-5 mt-5 col-12">
+        <button class="btn form-btn ml-3"><i class="fas fa-check mr-2"></i><u>A</u>ll Sites</button>
+        <button class="btn form-btn ml-3"><i class="fas fa-check mr-2 text-success"></i><u>O</u>K</button>
+        <button class="btn form-btn ml-3"><i class="fas fa-times mr-2 text-danger"></i><u>C</u>ancel</button>
+        <button class="btn form-btn ml-3"><i class="fas fa-question mr-2 text-info "></i><u>H</u>elp</button>
+      </div>
+    </div>
+  </div>
+</div>

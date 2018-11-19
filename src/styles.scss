@@ -263,6 +263,9 @@ tree-root .angular-tree-component-rtl .tree-children {
   color: $white !important;
   outline: none !important;
   box-shadow: none !important;
+  .svg-inline--fa {
+    color: $white !important;
+  }
 }
 
 .form-btn {
